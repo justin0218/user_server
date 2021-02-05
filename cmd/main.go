@@ -1,11 +1,11 @@
 package main
 
 import (
+	"fmt"
+	"time"
 	"user_server/api"
 	"user_server/pkg/etcd"
 	"user_server/store"
-	"fmt"
-	"time"
 )
 
 func main() {
