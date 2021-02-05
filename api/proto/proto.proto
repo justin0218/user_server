@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+option go_package = "proto";
+
+service admin_user {
+  rpc send_email_code(send_email_code_req) returns (send_email_code_res) {}
+  rpc register(register_req) returns (register_res) {}
+  rpc login(login_req) returns (register_res) {}
+  rpc password_back(password_back_req) returns (password_back_res) {}
+  rpc data_full(data_full_req) returns (res) {}
+}
+
+message send_email_code_req {
+  string email = 1;
+  string from = 2;
+}
+
+message send_email_code_res {
+  int64 code = 1;
+  string msg = 2;
+}
+
+message register_req {
+  string email = 1;
+  string code = 2;
+}
+
+message register_res {
+  int64 code = 1;
+  string msg = 2;
+  int64 uid = 3;
+  string name = 4;
+  string avatar = 5;
+  string email = 6;
+  string last_login_at = 7;
+  string created_at = 8;
+  string token = 9;
+  repeated string roles = 10;
+}
+
+message login_req {
+  string email = 1;
+  string password = 2;
+}
+
+message password_back_req{
+  string email = 1;
+  string code = 2;
+  string password = 3;
+}
+
+message password_back_res{
+  int64 code = 1;
+  string msg = 2;
+}
+
+message data_full_req{
+  int64 uid = 1;
+  string name = 2;
+  string avatar = 3;
+  string password = 4;
+}
+
+message res{
+  int64 code = 1;
+  string msg = 2;
+}
+
+
+//protoc -I . --go_out=plugins=grpc:. protos/payserver/payserver.proto
+//protoc --js_out=import_style=commonjs,binary:. ./payserver.proto
+
+//protoc payserver.proto --js_out=import_style=commonjs:generated --grpc-web_out=import_style=commonjs,mode=grpcweb,out=echo_grpc_pb.js:./
