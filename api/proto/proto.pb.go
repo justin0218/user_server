@@ -550,34 +550,34 @@ func init() {
 func init() { proto.RegisterFile("api/proto/proto.proto", fileDescriptor_ef32c37ea206d67b) }
 
 var fileDescriptor_ef32c37ea206d67b = []byte{
-	// 426 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x54, 0x4d, 0x8f, 0xd3, 0x30,
-	0x10, 0x25, 0x9b, 0xa4, 0xdb, 0x0c, 0x84, 0x0f, 0xb3, 0x20, 0x2b, 0x12, 0xd2, 0xca, 0x70, 0x40,
-	0x20, 0x05, 0x09, 0x2e, 0xac, 0x10, 0x5a, 0x95, 0x33, 0xa7, 0xde, 0xe0, 0x62, 0xb9, 0x8d, 0x5b,
-	0x45, 0x4d, 0xe2, 0x62, 0xbb, 0xf0, 0xd3, 0x39, 0x82, 0x66, 0x92, 0x96, 0xa6, 0x09, 0xa8, 0x5c,
-	0xd2, 0x37, 0xaf, 0x33, 0x6f, 0xa6, 0xf3, 0xa6, 0x81, 0x27, 0x6a, 0x5b, 0xbe, 0xd9, 0x5a, 0xe3,
-	0x4d, 0xfb, 0xcc, 0xe9, 0x29, 0x6e, 0xe1, 0xb1, 0xd3, 0x4d, 0x21, 0x75, 0xad, 0xca, 0x4a, 0x2e,
-	0x4d, 0xa1, 0xa5, 0xd5, 0xdf, 0xd8, 0x15, 0xc4, 0xc4, 0xf0, 0xe0, 0x3a, 0x78, 0x99, 0xcc, 0xdb,
-	0x80, 0x31, 0x88, 0x56, 0xd6, 0xd4, 0xfc, 0x82, 0x48, 0xc2, 0xe2, 0xc3, 0x98, 0x80, 0xc3, 0x54,
-	0xc4, 0x54, 0x1f, 0xce, 0x09, 0xb3, 0x87, 0x10, 0xd6, 0x6e, 0xdd, 0x55, 0x23, 0x14, 0xef, 0xe1,
-	0x9e, 0xd5, 0xeb, 0xd2, 0x79, 0x6d, 0xff, 0xdd, 0x96, 0xb4, 0xba, 0xb6, 0x88, 0xc5, 0xcf, 0xa0,
-	0x57, 0x7a, 0x66, 0x43, 0x64, 0x76, 0x65, 0xc1, 0x43, 0x4a, 0x42, 0x88, 0x75, 0x8d, 0xaa, 0x35,
-	0x8f, 0x5a, 0x71, 0xc4, 0xec, 0x29, 0x4c, 0xd4, 0x77, 0xe5, 0x95, 0xe5, 0x31, 0xb1, 0x5d, 0xf4,
-	0x67, 0xbc, 0xc9, 0xf1, 0x78, 0x02, 0xd2, 0x4a, 0x39, 0x2f, 0x2b, 0xb3, 0x2e, 0x1b, 0xa9, 0x3c,
-	0xbf, 0xa4, 0x6f, 0xef, 0x22, 0xf9, 0x19, 0xb9, 0x99, 0x67, 0xcf, 0x00, 0x96, 0x56, 0x2b, 0xaf,
-	0x0b, 0x4c, 0x98, 0x52, 0x42, 0xd2, 0x31, 0x33, 0x8f, 0xc2, 0xde, 0x6c, 0x74, 0xc3, 0x93, 0x56,
-	0x98, 0x02, 0x64, 0xad, 0xa9, 0xb4, 0xe3, 0x70, 0x1d, 0x22, 0x4b, 0x81, 0xf8, 0x08, 0x49, 0xdb,
-	0xe9, 0xef, 0x0b, 0xcb, 0x60, 0xba, 0x55, 0xce, 0xfd, 0x30, 0xb6, 0xe8, 0x7e, 0xfc, 0x21, 0x16,
-	0x5f, 0xe0, 0xd1, 0x1e, 0xcb, 0x85, 0x5a, 0x6e, 0xfe, 0x6f, 0xef, 0x3d, 0xe9, 0xf0, 0x44, 0xfa,
-	0x66, 0x28, 0x7d, 0xee, 0x21, 0x94, 0x90, 0x16, 0xca, 0x2b, 0xb9, 0xda, 0x55, 0x15, 0x4d, 0xd4,
-	0x19, 0x15, 0x0c, 0x8d, 0xba, 0x18, 0x35, 0x2a, 0xec, 0x19, 0x75, 0x3c, 0x65, 0x74, 0x32, 0xe5,
-	0x6b, 0x08, 0xcf, 0x9e, 0xeb, 0xed, 0xaf, 0x00, 0x40, 0x15, 0x75, 0xd9, 0xc8, 0x9d, 0xd3, 0x96,
-	0xdd, 0xc2, 0x83, 0x93, 0x63, 0x67, 0x57, 0xf9, 0xc8, 0xff, 0x27, 0x1b, 0x63, 0x9d, 0xb8, 0xc3,
-	0x5e, 0xc1, 0x74, 0x7f, 0xb5, 0x2c, 0xcd, 0x8f, 0x6f, 0x3f, 0xeb, 0x85, 0x98, 0xfb, 0x02, 0x62,
-	0x32, 0x9a, 0x41, 0x7e, 0x30, 0x7c, 0x98, 0x75, 0x03, 0x69, 0x6f, 0xe9, 0x8c, 0xe5, 0x03, 0x7f,
-	0xb3, 0x21, 0x87, 0xa5, 0xcf, 0x21, 0x39, 0x2c, 0x9d, 0xdd, 0xcf, 0x7b, 0x06, 0x64, 0x51, 0x4e,
-	0x49, 0x9f, 0x2e, 0xbf, 0xc6, 0xf4, 0xa6, 0x58, 0x4c, 0xe8, 0xe3, 0xdd, 0xef, 0x00, 0x00, 0x00,
-	0xff, 0xff, 0xab, 0x68, 0x7a, 0xa6, 0x49, 0x04, 0x00, 0x00,
+	// 420 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x54, 0xcf, 0xcf, 0xd2, 0x40,
+	0x10, 0xb5, 0x5f, 0x5b, 0x3e, 0x3a, 0x5a, 0x7f, 0xac, 0x68, 0x36, 0x4d, 0x4c, 0xc8, 0xea, 0xc1,
+	0x68, 0x52, 0x13, 0xbd, 0x48, 0x8c, 0x21, 0x78, 0xf6, 0xc4, 0x4d, 0x2f, 0xcd, 0x42, 0x17, 0xd2,
+	0xd0, 0x76, 0x71, 0x77, 0xd1, 0x3f, 0xdd, 0x78, 0x33, 0x33, 0x2d, 0x48, 0x69, 0x35, 0x78, 0x29,
+	0x6f, 0x1e, 0x33, 0x6f, 0x86, 0x79, 0x43, 0xe1, 0x89, 0xdc, 0x17, 0x6f, 0xf6, 0x46, 0x3b, 0xdd,
+	0x3c, 0x53, 0x7a, 0x8a, 0x39, 0x3c, 0xb6, 0xaa, 0xce, 0x33, 0x55, 0xc9, 0xa2, 0xcc, 0xd6, 0x3a,
+	0x57, 0x99, 0x51, 0xdf, 0xd8, 0x04, 0x42, 0x62, 0xb8, 0x37, 0xf5, 0x5e, 0x46, 0xcb, 0x26, 0x60,
+	0x0c, 0x82, 0x8d, 0xd1, 0x15, 0xbf, 0x21, 0x92, 0xb0, 0xf8, 0x30, 0x24, 0x60, 0x31, 0x15, 0x31,
+	0xd5, 0xfb, 0x4b, 0xc2, 0xec, 0x21, 0xf8, 0x95, 0xdd, 0xb6, 0xd5, 0x08, 0xc5, 0x7b, 0xb8, 0x67,
+	0xd4, 0xb6, 0xb0, 0x4e, 0x99, 0x7f, 0xb7, 0x25, 0xad, 0xb6, 0x2d, 0x62, 0xf1, 0xd3, 0xeb, 0x94,
+	0x5e, 0xd9, 0x10, 0x99, 0x43, 0x91, 0x73, 0x9f, 0x92, 0x10, 0x62, 0x5d, 0x2d, 0x2b, 0xc5, 0x83,
+	0x46, 0x1c, 0x31, 0x7b, 0x0a, 0x23, 0xf9, 0x5d, 0x3a, 0x69, 0x78, 0x48, 0x6c, 0x1b, 0xfd, 0x19,
+	0x6f, 0x74, 0x3e, 0x9e, 0x80, 0xb8, 0x94, 0xd6, 0x65, 0xa5, 0xde, 0x16, 0x75, 0x26, 0x1d, 0xbf,
+	0xa5, 0x6f, 0xef, 0x22, 0xf9, 0x19, 0xb9, 0x85, 0x63, 0xcf, 0x00, 0xd6, 0x46, 0x49, 0xa7, 0x72,
+	0x4c, 0x18, 0x53, 0x42, 0xd4, 0x32, 0x0b, 0x87, 0xc2, 0x4e, 0xef, 0x54, 0xcd, 0xa3, 0x46, 0x98,
+	0x02, 0x64, 0x8d, 0x2e, 0x95, 0xe5, 0x30, 0xf5, 0x91, 0xa5, 0x40, 0x7c, 0x84, 0xa8, 0xe9, 0xf4,
+	0xf7, 0x85, 0x25, 0x30, 0xde, 0x4b, 0x6b, 0x7f, 0x68, 0x93, 0xb7, 0x3f, 0xfe, 0x14, 0x8b, 0x2f,
+	0xf0, 0xe8, 0x88, 0xb3, 0x95, 0x5c, 0xef, 0xfe, 0x6f, 0xef, 0x1d, 0x69, 0xff, 0x42, 0x7a, 0xd6,
+	0x97, 0xbe, 0xf6, 0x10, 0x0a, 0x88, 0x73, 0xe9, 0x64, 0xb6, 0x39, 0x94, 0x25, 0x4d, 0xd4, 0x1a,
+	0xe5, 0xf5, 0x8d, 0xba, 0x19, 0x34, 0xca, 0xef, 0x18, 0x75, 0x3e, 0x65, 0x70, 0x31, 0xe5, 0x6b,
+	0xf0, 0xaf, 0x9e, 0xeb, 0xed, 0x2f, 0x0f, 0x82, 0x83, 0x55, 0x86, 0xcd, 0xe1, 0xc1, 0xc5, 0x99,
+	0xb3, 0x49, 0x3a, 0xf0, 0xcf, 0x49, 0x86, 0x58, 0x2b, 0xee, 0xb0, 0x57, 0x30, 0x3e, 0xde, 0x2b,
+	0x8b, 0xd3, 0xf3, 0xab, 0x4f, 0x3a, 0x21, 0xe6, 0xbe, 0x80, 0x90, 0x2c, 0x66, 0x90, 0x9e, 0xac,
+	0xee, 0x67, 0xcd, 0x20, 0xee, 0xac, 0x9b, 0xb1, 0xb4, 0xe7, 0x6c, 0xd2, 0xe7, 0xb0, 0xf4, 0x39,
+	0x44, 0xa7, 0x75, 0xb3, 0xfb, 0x69, 0x67, 0xf5, 0x49, 0x90, 0x52, 0xd2, 0xa7, 0xdb, 0xaf, 0x21,
+	0xbd, 0x23, 0x56, 0x23, 0xfa, 0x78, 0xf7, 0x3b, 0x00, 0x00, 0xff, 0xff, 0xc3, 0xa2, 0xf3, 0x58,
+	0x43, 0x04, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -588,10 +588,10 @@ var _ grpc.ClientConn
 // is compatible with the grpc package it is being compiled against.
 const _ = grpc.SupportPackageIsVersion4
 
-// AdminUserClient is the client API for AdminUser service.
+// UserClient is the client API for User service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type AdminUserClient interface {
+type UserClient interface {
 	SendEmailCode(ctx context.Context, in *SendEmailCodeReq, opts ...grpc.CallOption) (*SendEmailCodeRes, error)
 	Register(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*RegisterRes, error)
 	Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*RegisterRes, error)
@@ -599,61 +599,61 @@ type AdminUserClient interface {
 	DataFull(ctx context.Context, in *DataFullReq, opts ...grpc.CallOption) (*Res, error)
 }
 
-type adminUserClient struct {
+type userClient struct {
 	cc *grpc.ClientConn
 }
 
-func NewAdminUserClient(cc *grpc.ClientConn) AdminUserClient {
-	return &adminUserClient{cc}
+func NewUserClient(cc *grpc.ClientConn) UserClient {
+	return &userClient{cc}
 }
 
-func (c *adminUserClient) SendEmailCode(ctx context.Context, in *SendEmailCodeReq, opts ...grpc.CallOption) (*SendEmailCodeRes, error) {
+func (c *userClient) SendEmailCode(ctx context.Context, in *SendEmailCodeReq, opts ...grpc.CallOption) (*SendEmailCodeRes, error) {
 	out := new(SendEmailCodeRes)
-	err := c.cc.Invoke(ctx, "/admin_user/send_email_code", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/user/send_email_code", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *adminUserClient) Register(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*RegisterRes, error) {
+func (c *userClient) Register(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*RegisterRes, error) {
 	out := new(RegisterRes)
-	err := c.cc.Invoke(ctx, "/admin_user/register", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/user/register", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *adminUserClient) Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*RegisterRes, error) {
+func (c *userClient) Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*RegisterRes, error) {
 	out := new(RegisterRes)
-	err := c.cc.Invoke(ctx, "/admin_user/login", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/user/login", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *adminUserClient) PasswordBack(ctx context.Context, in *PasswordBackReq, opts ...grpc.CallOption) (*PasswordBackRes, error) {
+func (c *userClient) PasswordBack(ctx context.Context, in *PasswordBackReq, opts ...grpc.CallOption) (*PasswordBackRes, error) {
 	out := new(PasswordBackRes)
-	err := c.cc.Invoke(ctx, "/admin_user/password_back", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/user/password_back", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *adminUserClient) DataFull(ctx context.Context, in *DataFullReq, opts ...grpc.CallOption) (*Res, error) {
+func (c *userClient) DataFull(ctx context.Context, in *DataFullReq, opts ...grpc.CallOption) (*Res, error) {
 	out := new(Res)
-	err := c.cc.Invoke(ctx, "/admin_user/data_full", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/user/data_full", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// AdminUserServer is the server API for AdminUser service.
-type AdminUserServer interface {
+// UserServer is the server API for User service.
+type UserServer interface {
 	SendEmailCode(context.Context, *SendEmailCodeReq) (*SendEmailCodeRes, error)
 	Register(context.Context, *RegisterReq) (*RegisterRes, error)
 	Login(context.Context, *LoginReq) (*RegisterRes, error)
@@ -661,143 +661,143 @@ type AdminUserServer interface {
 	DataFull(context.Context, *DataFullReq) (*Res, error)
 }
 
-// UnimplementedAdminUserServer can be embedded to have forward compatible implementations.
-type UnimplementedAdminUserServer struct {
+// UnimplementedUserServer can be embedded to have forward compatible implementations.
+type UnimplementedUserServer struct {
 }
 
-func (*UnimplementedAdminUserServer) SendEmailCode(ctx context.Context, req *SendEmailCodeReq) (*SendEmailCodeRes, error) {
+func (*UnimplementedUserServer) SendEmailCode(ctx context.Context, req *SendEmailCodeReq) (*SendEmailCodeRes, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method SendEmailCode not implemented")
 }
-func (*UnimplementedAdminUserServer) Register(ctx context.Context, req *RegisterReq) (*RegisterRes, error) {
+func (*UnimplementedUserServer) Register(ctx context.Context, req *RegisterReq) (*RegisterRes, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Register not implemented")
 }
-func (*UnimplementedAdminUserServer) Login(ctx context.Context, req *LoginReq) (*RegisterRes, error) {
+func (*UnimplementedUserServer) Login(ctx context.Context, req *LoginReq) (*RegisterRes, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Login not implemented")
 }
-func (*UnimplementedAdminUserServer) PasswordBack(ctx context.Context, req *PasswordBackReq) (*PasswordBackRes, error) {
+func (*UnimplementedUserServer) PasswordBack(ctx context.Context, req *PasswordBackReq) (*PasswordBackRes, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method PasswordBack not implemented")
 }
-func (*UnimplementedAdminUserServer) DataFull(ctx context.Context, req *DataFullReq) (*Res, error) {
+func (*UnimplementedUserServer) DataFull(ctx context.Context, req *DataFullReq) (*Res, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DataFull not implemented")
 }
 
-func RegisterAdminUserServer(s *grpc.Server, srv AdminUserServer) {
-	s.RegisterService(&_AdminUser_serviceDesc, srv)
+func RegisterUserServer(s *grpc.Server, srv UserServer) {
+	s.RegisterService(&_User_serviceDesc, srv)
 }
 
-func _AdminUser_SendEmailCode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _User_SendEmailCode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(SendEmailCodeReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AdminUserServer).SendEmailCode(ctx, in)
+		return srv.(UserServer).SendEmailCode(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/admin_user/SendEmailCode",
+		FullMethod: "/user/SendEmailCode",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AdminUserServer).SendEmailCode(ctx, req.(*SendEmailCodeReq))
+		return srv.(UserServer).SendEmailCode(ctx, req.(*SendEmailCodeReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AdminUser_Register_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _User_Register_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(RegisterReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AdminUserServer).Register(ctx, in)
+		return srv.(UserServer).Register(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/admin_user/Register",
+		FullMethod: "/user/Register",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AdminUserServer).Register(ctx, req.(*RegisterReq))
+		return srv.(UserServer).Register(ctx, req.(*RegisterReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AdminUser_Login_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _User_Login_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(LoginReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AdminUserServer).Login(ctx, in)
+		return srv.(UserServer).Login(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/admin_user/Login",
+		FullMethod: "/user/Login",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AdminUserServer).Login(ctx, req.(*LoginReq))
+		return srv.(UserServer).Login(ctx, req.(*LoginReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AdminUser_PasswordBack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _User_PasswordBack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PasswordBackReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AdminUserServer).PasswordBack(ctx, in)
+		return srv.(UserServer).PasswordBack(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/admin_user/PasswordBack",
+		FullMethod: "/user/PasswordBack",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AdminUserServer).PasswordBack(ctx, req.(*PasswordBackReq))
+		return srv.(UserServer).PasswordBack(ctx, req.(*PasswordBackReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _AdminUser_DataFull_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _User_DataFull_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(DataFullReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(AdminUserServer).DataFull(ctx, in)
+		return srv.(UserServer).DataFull(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/admin_user/DataFull",
+		FullMethod: "/user/DataFull",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(AdminUserServer).DataFull(ctx, req.(*DataFullReq))
+		return srv.(UserServer).DataFull(ctx, req.(*DataFullReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-var _AdminUser_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "admin_user",
-	HandlerType: (*AdminUserServer)(nil),
+var _User_serviceDesc = grpc.ServiceDesc{
+	ServiceName: "user",
+	HandlerType: (*UserServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "send_email_code",
-			Handler:    _AdminUser_SendEmailCode_Handler,
+			Handler:    _User_SendEmailCode_Handler,
 		},
 		{
 			MethodName: "register",
-			Handler:    _AdminUser_Register_Handler,
+			Handler:    _User_Register_Handler,
 		},
 		{
 			MethodName: "login",
-			Handler:    _AdminUser_Login_Handler,
+			Handler:    _User_Login_Handler,
 		},
 		{
 			MethodName: "password_back",
-			Handler:    _AdminUser_PasswordBack_Handler,
+			Handler:    _User_PasswordBack_Handler,
 		},
 		{
 			MethodName: "data_full",
-			Handler:    _AdminUser_DataFull_Handler,
+			Handler:    _User_DataFull_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 option go_package = "proto";
 
-service admin_user {
+service user {
   rpc send_email_code(send_email_code_req) returns (send_email_code_res) {}
   rpc register(register_req) returns (register_res) {}
   rpc login(login_req) returns (register_res) {}
