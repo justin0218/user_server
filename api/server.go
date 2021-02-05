@@ -9,7 +9,7 @@ import (
 	"net"
 )
 
-type AdminUserSvr struct {
+type UserSvr struct {
 	userService services.UserService
 }
 
@@ -21,7 +21,7 @@ func GrpcServer() {
 	}
 	var opts []grpc.ServerOption
 	svr := grpc.NewServer(opts...)
-	proto.RegisterAdminUserServer(svr, &AdminUserSvr{})
+	proto.RegisterUserServer(svr, &UserSvr{})
 	err = svr.Serve(lis)
 	if err != nil {
 		panic(err)

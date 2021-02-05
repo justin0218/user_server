@@ -6,7 +6,7 @@ import (
 	"context"
 )
 
-func (s *AdminUserSvr) SendEmailCode(ctx context.Context, req *proto.SendEmailCodeReq) (*proto.SendEmailCodeRes, error) {
+func (s *UserSvr) SendEmailCode(ctx context.Context, req *proto.SendEmailCodeReq) (*proto.SendEmailCodeRes, error) {
 	ret := &proto.SendEmailCodeRes{Code: 400}
 	if req.Email == "" {
 		ret.Msg = "邮箱发送失败，请检查邮箱是否正确"
@@ -21,7 +21,7 @@ func (s *AdminUserSvr) SendEmailCode(ctx context.Context, req *proto.SendEmailCo
 	return ret, nil
 }
 
-func (s *AdminUserSvr) Register(ctx context.Context, req *proto.RegisterReq) (*proto.RegisterRes, error) {
+func (s *UserSvr) Register(ctx context.Context, req *proto.RegisterReq) (*proto.RegisterRes, error) {
 	ret := &proto.RegisterRes{Code: 400}
 	if req.Email == "" {
 		ret.Msg = "邮箱发送失败，请检查邮箱是否正确"
@@ -36,7 +36,7 @@ func (s *AdminUserSvr) Register(ctx context.Context, req *proto.RegisterReq) (*p
 	return r, nil
 }
 
-func (s *AdminUserSvr) Login(ctx context.Context, req *proto.LoginReq) (*proto.RegisterRes, error) {
+func (s *UserSvr) Login(ctx context.Context, req *proto.LoginReq) (*proto.RegisterRes, error) {
 	ret := &proto.RegisterRes{Code: 400}
 	if req.Email == "" {
 		ret.Msg = "邮箱发送失败，请检查邮箱是否正确"
@@ -51,7 +51,7 @@ func (s *AdminUserSvr) Login(ctx context.Context, req *proto.LoginReq) (*proto.R
 	return r, nil
 }
 
-func (s *AdminUserSvr) PasswordBack(ctx context.Context, req *proto.PasswordBackReq) (*proto.PasswordBackRes, error) {
+func (s *UserSvr) PasswordBack(ctx context.Context, req *proto.PasswordBackReq) (*proto.PasswordBackRes, error) {
 	ret := &proto.PasswordBackRes{Code: 400}
 	if req.Email == "" {
 		ret.Msg = "请检查邮箱是否正确"
@@ -66,7 +66,7 @@ func (s *AdminUserSvr) PasswordBack(ctx context.Context, req *proto.PasswordBack
 	return ret, nil
 }
 
-func (s *AdminUserSvr) DataFull(ctx context.Context, req *proto.DataFullReq) (*proto.Res, error) {
+func (s *UserSvr) DataFull(ctx context.Context, req *proto.DataFullReq) (*proto.Res, error) {
 	ret := &proto.Res{Code: 400}
 	if req.Uid <= 0 || req.Name == "" || req.Avatar == "" || req.Password == "" {
 		ret.Msg = "参数错误"
