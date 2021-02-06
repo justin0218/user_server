@@ -39,7 +39,7 @@ type Model struct {
 func NewModel(db *gorm.DB) *Model {
 	return &Model{
 		Db:   db,
-		Name: "admin_user",
+		Name: "admin_users",
 	}
 }
 
