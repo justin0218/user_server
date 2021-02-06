@@ -1,16 +1,17 @@
 package api
 
 import (
-	"user_server/api/proto"
-	"user_server/internal/services"
-	"user_server/store"
 	"fmt"
 	"google.golang.org/grpc"
 	"net"
+	"user_server/api/proto"
+	"user_server/internal/services"
+	"user_server/store"
 )
 
 type UserSvr struct {
-	userService services.UserService
+	AdminUserService services.AdminUserService
+	ClientUserService services.ClientUserService
 }
 
 func GrpcServer() {

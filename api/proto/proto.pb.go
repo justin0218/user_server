@@ -24,7 +24,7 @@ var _ = math.Inf
 // proto package needs to be updated.
 const _ = proto.ProtoPackageIsVersion3 // please upgrade the proto package
 
-type SendEmailCodeReq struct {
+type AdminSendEmailCodeReq struct {
 	Email                string   `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
 	From                 string   `protobuf:"bytes,2,opt,name=from,proto3" json:"from,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -32,46 +32,46 @@ type SendEmailCodeReq struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *SendEmailCodeReq) Reset()         { *m = SendEmailCodeReq{} }
-func (m *SendEmailCodeReq) String() string { return proto.CompactTextString(m) }
-func (*SendEmailCodeReq) ProtoMessage()    {}
-func (*SendEmailCodeReq) Descriptor() ([]byte, []int) {
+func (m *AdminSendEmailCodeReq) Reset()         { *m = AdminSendEmailCodeReq{} }
+func (m *AdminSendEmailCodeReq) String() string { return proto.CompactTextString(m) }
+func (*AdminSendEmailCodeReq) ProtoMessage()    {}
+func (*AdminSendEmailCodeReq) Descriptor() ([]byte, []int) {
 	return fileDescriptor_ef32c37ea206d67b, []int{0}
 }
 
-func (m *SendEmailCodeReq) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SendEmailCodeReq.Unmarshal(m, b)
+func (m *AdminSendEmailCodeReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AdminSendEmailCodeReq.Unmarshal(m, b)
 }
-func (m *SendEmailCodeReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SendEmailCodeReq.Marshal(b, m, deterministic)
+func (m *AdminSendEmailCodeReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AdminSendEmailCodeReq.Marshal(b, m, deterministic)
 }
-func (m *SendEmailCodeReq) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SendEmailCodeReq.Merge(m, src)
+func (m *AdminSendEmailCodeReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AdminSendEmailCodeReq.Merge(m, src)
 }
-func (m *SendEmailCodeReq) XXX_Size() int {
-	return xxx_messageInfo_SendEmailCodeReq.Size(m)
+func (m *AdminSendEmailCodeReq) XXX_Size() int {
+	return xxx_messageInfo_AdminSendEmailCodeReq.Size(m)
 }
-func (m *SendEmailCodeReq) XXX_DiscardUnknown() {
-	xxx_messageInfo_SendEmailCodeReq.DiscardUnknown(m)
+func (m *AdminSendEmailCodeReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_AdminSendEmailCodeReq.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_SendEmailCodeReq proto.InternalMessageInfo
+var xxx_messageInfo_AdminSendEmailCodeReq proto.InternalMessageInfo
 
-func (m *SendEmailCodeReq) GetEmail() string {
+func (m *AdminSendEmailCodeReq) GetEmail() string {
 	if m != nil {
 		return m.Email
 	}
 	return ""
 }
 
-func (m *SendEmailCodeReq) GetFrom() string {
+func (m *AdminSendEmailCodeReq) GetFrom() string {
 	if m != nil {
 		return m.From
 	}
 	return ""
 }
 
-type SendEmailCodeRes struct {
+type AdminSendEmailCodeRes struct {
 	Code                 int64    `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
 	Msg                  string   `protobuf:"bytes,2,opt,name=msg,proto3" json:"msg,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -79,46 +79,46 @@ type SendEmailCodeRes struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *SendEmailCodeRes) Reset()         { *m = SendEmailCodeRes{} }
-func (m *SendEmailCodeRes) String() string { return proto.CompactTextString(m) }
-func (*SendEmailCodeRes) ProtoMessage()    {}
-func (*SendEmailCodeRes) Descriptor() ([]byte, []int) {
+func (m *AdminSendEmailCodeRes) Reset()         { *m = AdminSendEmailCodeRes{} }
+func (m *AdminSendEmailCodeRes) String() string { return proto.CompactTextString(m) }
+func (*AdminSendEmailCodeRes) ProtoMessage()    {}
+func (*AdminSendEmailCodeRes) Descriptor() ([]byte, []int) {
 	return fileDescriptor_ef32c37ea206d67b, []int{1}
 }
 
-func (m *SendEmailCodeRes) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_SendEmailCodeRes.Unmarshal(m, b)
+func (m *AdminSendEmailCodeRes) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AdminSendEmailCodeRes.Unmarshal(m, b)
 }
-func (m *SendEmailCodeRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_SendEmailCodeRes.Marshal(b, m, deterministic)
+func (m *AdminSendEmailCodeRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AdminSendEmailCodeRes.Marshal(b, m, deterministic)
 }
-func (m *SendEmailCodeRes) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_SendEmailCodeRes.Merge(m, src)
+func (m *AdminSendEmailCodeRes) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AdminSendEmailCodeRes.Merge(m, src)
 }
-func (m *SendEmailCodeRes) XXX_Size() int {
-	return xxx_messageInfo_SendEmailCodeRes.Size(m)
+func (m *AdminSendEmailCodeRes) XXX_Size() int {
+	return xxx_messageInfo_AdminSendEmailCodeRes.Size(m)
 }
-func (m *SendEmailCodeRes) XXX_DiscardUnknown() {
-	xxx_messageInfo_SendEmailCodeRes.DiscardUnknown(m)
+func (m *AdminSendEmailCodeRes) XXX_DiscardUnknown() {
+	xxx_messageInfo_AdminSendEmailCodeRes.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_SendEmailCodeRes proto.InternalMessageInfo
+var xxx_messageInfo_AdminSendEmailCodeRes proto.InternalMessageInfo
 
-func (m *SendEmailCodeRes) GetCode() int64 {
+func (m *AdminSendEmailCodeRes) GetCode() int64 {
 	if m != nil {
 		return m.Code
 	}
 	return 0
 }
 
-func (m *SendEmailCodeRes) GetMsg() string {
+func (m *AdminSendEmailCodeRes) GetMsg() string {
 	if m != nil {
 		return m.Msg
 	}
 	return ""
 }
 
-type RegisterReq struct {
+type AdminRegisterReq struct {
 	Email                string   `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
 	Code                 string   `protobuf:"bytes,2,opt,name=code,proto3" json:"code,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -126,46 +126,46 @@ type RegisterReq struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *RegisterReq) Reset()         { *m = RegisterReq{} }
-func (m *RegisterReq) String() string { return proto.CompactTextString(m) }
-func (*RegisterReq) ProtoMessage()    {}
-func (*RegisterReq) Descriptor() ([]byte, []int) {
+func (m *AdminRegisterReq) Reset()         { *m = AdminRegisterReq{} }
+func (m *AdminRegisterReq) String() string { return proto.CompactTextString(m) }
+func (*AdminRegisterReq) ProtoMessage()    {}
+func (*AdminRegisterReq) Descriptor() ([]byte, []int) {
 	return fileDescriptor_ef32c37ea206d67b, []int{2}
 }
 
-func (m *RegisterReq) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_RegisterReq.Unmarshal(m, b)
+func (m *AdminRegisterReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AdminRegisterReq.Unmarshal(m, b)
 }
-func (m *RegisterReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_RegisterReq.Marshal(b, m, deterministic)
+func (m *AdminRegisterReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AdminRegisterReq.Marshal(b, m, deterministic)
 }
-func (m *RegisterReq) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RegisterReq.Merge(m, src)
+func (m *AdminRegisterReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AdminRegisterReq.Merge(m, src)
 }
-func (m *RegisterReq) XXX_Size() int {
-	return xxx_messageInfo_RegisterReq.Size(m)
+func (m *AdminRegisterReq) XXX_Size() int {
+	return xxx_messageInfo_AdminRegisterReq.Size(m)
 }
-func (m *RegisterReq) XXX_DiscardUnknown() {
-	xxx_messageInfo_RegisterReq.DiscardUnknown(m)
+func (m *AdminRegisterReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_AdminRegisterReq.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_RegisterReq proto.InternalMessageInfo
+var xxx_messageInfo_AdminRegisterReq proto.InternalMessageInfo
 
-func (m *RegisterReq) GetEmail() string {
+func (m *AdminRegisterReq) GetEmail() string {
 	if m != nil {
 		return m.Email
 	}
 	return ""
 }
 
-func (m *RegisterReq) GetCode() string {
+func (m *AdminRegisterReq) GetCode() string {
 	if m != nil {
 		return m.Code
 	}
 	return ""
 }
 
-type RegisterRes struct {
+type AdminRegisterRes struct {
 	Code                 int64    `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
 	Msg                  string   `protobuf:"bytes,2,opt,name=msg,proto3" json:"msg,omitempty"`
 	Uid                  int64    `protobuf:"varint,3,opt,name=uid,proto3" json:"uid,omitempty"`
@@ -181,102 +181,102 @@ type RegisterRes struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *RegisterRes) Reset()         { *m = RegisterRes{} }
-func (m *RegisterRes) String() string { return proto.CompactTextString(m) }
-func (*RegisterRes) ProtoMessage()    {}
-func (*RegisterRes) Descriptor() ([]byte, []int) {
+func (m *AdminRegisterRes) Reset()         { *m = AdminRegisterRes{} }
+func (m *AdminRegisterRes) String() string { return proto.CompactTextString(m) }
+func (*AdminRegisterRes) ProtoMessage()    {}
+func (*AdminRegisterRes) Descriptor() ([]byte, []int) {
 	return fileDescriptor_ef32c37ea206d67b, []int{3}
 }
 
-func (m *RegisterRes) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_RegisterRes.Unmarshal(m, b)
+func (m *AdminRegisterRes) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AdminRegisterRes.Unmarshal(m, b)
 }
-func (m *RegisterRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_RegisterRes.Marshal(b, m, deterministic)
+func (m *AdminRegisterRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AdminRegisterRes.Marshal(b, m, deterministic)
 }
-func (m *RegisterRes) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_RegisterRes.Merge(m, src)
+func (m *AdminRegisterRes) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AdminRegisterRes.Merge(m, src)
 }
-func (m *RegisterRes) XXX_Size() int {
-	return xxx_messageInfo_RegisterRes.Size(m)
+func (m *AdminRegisterRes) XXX_Size() int {
+	return xxx_messageInfo_AdminRegisterRes.Size(m)
 }
-func (m *RegisterRes) XXX_DiscardUnknown() {
-	xxx_messageInfo_RegisterRes.DiscardUnknown(m)
+func (m *AdminRegisterRes) XXX_DiscardUnknown() {
+	xxx_messageInfo_AdminRegisterRes.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_RegisterRes proto.InternalMessageInfo
+var xxx_messageInfo_AdminRegisterRes proto.InternalMessageInfo
 
-func (m *RegisterRes) GetCode() int64 {
+func (m *AdminRegisterRes) GetCode() int64 {
 	if m != nil {
 		return m.Code
 	}
 	return 0
 }
 
-func (m *RegisterRes) GetMsg() string {
+func (m *AdminRegisterRes) GetMsg() string {
 	if m != nil {
 		return m.Msg
 	}
 	return ""
 }
 
-func (m *RegisterRes) GetUid() int64 {
+func (m *AdminRegisterRes) GetUid() int64 {
 	if m != nil {
 		return m.Uid
 	}
 	return 0
 }
 
-func (m *RegisterRes) GetName() string {
+func (m *AdminRegisterRes) GetName() string {
 	if m != nil {
 		return m.Name
 	}
 	return ""
 }
 
-func (m *RegisterRes) GetAvatar() string {
+func (m *AdminRegisterRes) GetAvatar() string {
 	if m != nil {
 		return m.Avatar
 	}
 	return ""
 }
 
-func (m *RegisterRes) GetEmail() string {
+func (m *AdminRegisterRes) GetEmail() string {
 	if m != nil {
 		return m.Email
 	}
 	return ""
 }
 
-func (m *RegisterRes) GetLastLoginAt() string {
+func (m *AdminRegisterRes) GetLastLoginAt() string {
 	if m != nil {
 		return m.LastLoginAt
 	}
 	return ""
 }
 
-func (m *RegisterRes) GetCreatedAt() string {
+func (m *AdminRegisterRes) GetCreatedAt() string {
 	if m != nil {
 		return m.CreatedAt
 	}
 	return ""
 }
 
-func (m *RegisterRes) GetToken() string {
+func (m *AdminRegisterRes) GetToken() string {
 	if m != nil {
 		return m.Token
 	}
 	return ""
 }
 
-func (m *RegisterRes) GetRoles() []string {
+func (m *AdminRegisterRes) GetRoles() []string {
 	if m != nil {
 		return m.Roles
 	}
 	return nil
 }
 
-type LoginReq struct {
+type AdminLoginReq struct {
 	Email                string   `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
 	Password             string   `protobuf:"bytes,2,opt,name=password,proto3" json:"password,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -284,46 +284,46 @@ type LoginReq struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *LoginReq) Reset()         { *m = LoginReq{} }
-func (m *LoginReq) String() string { return proto.CompactTextString(m) }
-func (*LoginReq) ProtoMessage()    {}
-func (*LoginReq) Descriptor() ([]byte, []int) {
+func (m *AdminLoginReq) Reset()         { *m = AdminLoginReq{} }
+func (m *AdminLoginReq) String() string { return proto.CompactTextString(m) }
+func (*AdminLoginReq) ProtoMessage()    {}
+func (*AdminLoginReq) Descriptor() ([]byte, []int) {
 	return fileDescriptor_ef32c37ea206d67b, []int{4}
 }
 
-func (m *LoginReq) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_LoginReq.Unmarshal(m, b)
+func (m *AdminLoginReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AdminLoginReq.Unmarshal(m, b)
 }
-func (m *LoginReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_LoginReq.Marshal(b, m, deterministic)
+func (m *AdminLoginReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AdminLoginReq.Marshal(b, m, deterministic)
 }
-func (m *LoginReq) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_LoginReq.Merge(m, src)
+func (m *AdminLoginReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AdminLoginReq.Merge(m, src)
 }
-func (m *LoginReq) XXX_Size() int {
-	return xxx_messageInfo_LoginReq.Size(m)
+func (m *AdminLoginReq) XXX_Size() int {
+	return xxx_messageInfo_AdminLoginReq.Size(m)
 }
-func (m *LoginReq) XXX_DiscardUnknown() {
-	xxx_messageInfo_LoginReq.DiscardUnknown(m)
+func (m *AdminLoginReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_AdminLoginReq.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_LoginReq proto.InternalMessageInfo
+var xxx_messageInfo_AdminLoginReq proto.InternalMessageInfo
 
-func (m *LoginReq) GetEmail() string {
+func (m *AdminLoginReq) GetEmail() string {
 	if m != nil {
 		return m.Email
 	}
 	return ""
 }
 
-func (m *LoginReq) GetPassword() string {
+func (m *AdminLoginReq) GetPassword() string {
 	if m != nil {
 		return m.Password
 	}
 	return ""
 }
 
-type PasswordBackReq struct {
+type AdminPasswordBackReq struct {
 	Email                string   `protobuf:"bytes,1,opt,name=email,proto3" json:"email,omitempty"`
 	Code                 string   `protobuf:"bytes,2,opt,name=code,proto3" json:"code,omitempty"`
 	Password             string   `protobuf:"bytes,3,opt,name=password,proto3" json:"password,omitempty"`
@@ -332,53 +332,53 @@ type PasswordBackReq struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *PasswordBackReq) Reset()         { *m = PasswordBackReq{} }
-func (m *PasswordBackReq) String() string { return proto.CompactTextString(m) }
-func (*PasswordBackReq) ProtoMessage()    {}
-func (*PasswordBackReq) Descriptor() ([]byte, []int) {
+func (m *AdminPasswordBackReq) Reset()         { *m = AdminPasswordBackReq{} }
+func (m *AdminPasswordBackReq) String() string { return proto.CompactTextString(m) }
+func (*AdminPasswordBackReq) ProtoMessage()    {}
+func (*AdminPasswordBackReq) Descriptor() ([]byte, []int) {
 	return fileDescriptor_ef32c37ea206d67b, []int{5}
 }
 
-func (m *PasswordBackReq) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PasswordBackReq.Unmarshal(m, b)
+func (m *AdminPasswordBackReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AdminPasswordBackReq.Unmarshal(m, b)
 }
-func (m *PasswordBackReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PasswordBackReq.Marshal(b, m, deterministic)
+func (m *AdminPasswordBackReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AdminPasswordBackReq.Marshal(b, m, deterministic)
 }
-func (m *PasswordBackReq) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PasswordBackReq.Merge(m, src)
+func (m *AdminPasswordBackReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AdminPasswordBackReq.Merge(m, src)
 }
-func (m *PasswordBackReq) XXX_Size() int {
-	return xxx_messageInfo_PasswordBackReq.Size(m)
+func (m *AdminPasswordBackReq) XXX_Size() int {
+	return xxx_messageInfo_AdminPasswordBackReq.Size(m)
 }
-func (m *PasswordBackReq) XXX_DiscardUnknown() {
-	xxx_messageInfo_PasswordBackReq.DiscardUnknown(m)
+func (m *AdminPasswordBackReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_AdminPasswordBackReq.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_PasswordBackReq proto.InternalMessageInfo
+var xxx_messageInfo_AdminPasswordBackReq proto.InternalMessageInfo
 
-func (m *PasswordBackReq) GetEmail() string {
+func (m *AdminPasswordBackReq) GetEmail() string {
 	if m != nil {
 		return m.Email
 	}
 	return ""
 }
 
-func (m *PasswordBackReq) GetCode() string {
+func (m *AdminPasswordBackReq) GetCode() string {
 	if m != nil {
 		return m.Code
 	}
 	return ""
 }
 
-func (m *PasswordBackReq) GetPassword() string {
+func (m *AdminPasswordBackReq) GetPassword() string {
 	if m != nil {
 		return m.Password
 	}
 	return ""
 }
 
-type PasswordBackRes struct {
+type AdminPasswordBackRes struct {
 	Code                 int64    `protobuf:"varint,1,opt,name=code,proto3" json:"code,omitempty"`
 	Msg                  string   `protobuf:"bytes,2,opt,name=msg,proto3" json:"msg,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
@@ -386,46 +386,46 @@ type PasswordBackRes struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *PasswordBackRes) Reset()         { *m = PasswordBackRes{} }
-func (m *PasswordBackRes) String() string { return proto.CompactTextString(m) }
-func (*PasswordBackRes) ProtoMessage()    {}
-func (*PasswordBackRes) Descriptor() ([]byte, []int) {
+func (m *AdminPasswordBackRes) Reset()         { *m = AdminPasswordBackRes{} }
+func (m *AdminPasswordBackRes) String() string { return proto.CompactTextString(m) }
+func (*AdminPasswordBackRes) ProtoMessage()    {}
+func (*AdminPasswordBackRes) Descriptor() ([]byte, []int) {
 	return fileDescriptor_ef32c37ea206d67b, []int{6}
 }
 
-func (m *PasswordBackRes) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_PasswordBackRes.Unmarshal(m, b)
+func (m *AdminPasswordBackRes) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AdminPasswordBackRes.Unmarshal(m, b)
 }
-func (m *PasswordBackRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_PasswordBackRes.Marshal(b, m, deterministic)
+func (m *AdminPasswordBackRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AdminPasswordBackRes.Marshal(b, m, deterministic)
 }
-func (m *PasswordBackRes) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_PasswordBackRes.Merge(m, src)
+func (m *AdminPasswordBackRes) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AdminPasswordBackRes.Merge(m, src)
 }
-func (m *PasswordBackRes) XXX_Size() int {
-	return xxx_messageInfo_PasswordBackRes.Size(m)
+func (m *AdminPasswordBackRes) XXX_Size() int {
+	return xxx_messageInfo_AdminPasswordBackRes.Size(m)
 }
-func (m *PasswordBackRes) XXX_DiscardUnknown() {
-	xxx_messageInfo_PasswordBackRes.DiscardUnknown(m)
+func (m *AdminPasswordBackRes) XXX_DiscardUnknown() {
+	xxx_messageInfo_AdminPasswordBackRes.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_PasswordBackRes proto.InternalMessageInfo
+var xxx_messageInfo_AdminPasswordBackRes proto.InternalMessageInfo
 
-func (m *PasswordBackRes) GetCode() int64 {
+func (m *AdminPasswordBackRes) GetCode() int64 {
 	if m != nil {
 		return m.Code
 	}
 	return 0
 }
 
-func (m *PasswordBackRes) GetMsg() string {
+func (m *AdminPasswordBackRes) GetMsg() string {
 	if m != nil {
 		return m.Msg
 	}
 	return ""
 }
 
-type DataFullReq struct {
+type AdminDataFullReq struct {
 	Uid                  int64    `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
 	Name                 string   `protobuf:"bytes,2,opt,name=name,proto3" json:"name,omitempty"`
 	Avatar               string   `protobuf:"bytes,3,opt,name=avatar,proto3" json:"avatar,omitempty"`
@@ -435,53 +435,53 @@ type DataFullReq struct {
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *DataFullReq) Reset()         { *m = DataFullReq{} }
-func (m *DataFullReq) String() string { return proto.CompactTextString(m) }
-func (*DataFullReq) ProtoMessage()    {}
-func (*DataFullReq) Descriptor() ([]byte, []int) {
+func (m *AdminDataFullReq) Reset()         { *m = AdminDataFullReq{} }
+func (m *AdminDataFullReq) String() string { return proto.CompactTextString(m) }
+func (*AdminDataFullReq) ProtoMessage()    {}
+func (*AdminDataFullReq) Descriptor() ([]byte, []int) {
 	return fileDescriptor_ef32c37ea206d67b, []int{7}
 }
 
-func (m *DataFullReq) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_DataFullReq.Unmarshal(m, b)
+func (m *AdminDataFullReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_AdminDataFullReq.Unmarshal(m, b)
 }
-func (m *DataFullReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_DataFullReq.Marshal(b, m, deterministic)
+func (m *AdminDataFullReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_AdminDataFullReq.Marshal(b, m, deterministic)
 }
-func (m *DataFullReq) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_DataFullReq.Merge(m, src)
+func (m *AdminDataFullReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_AdminDataFullReq.Merge(m, src)
 }
-func (m *DataFullReq) XXX_Size() int {
-	return xxx_messageInfo_DataFullReq.Size(m)
+func (m *AdminDataFullReq) XXX_Size() int {
+	return xxx_messageInfo_AdminDataFullReq.Size(m)
 }
-func (m *DataFullReq) XXX_DiscardUnknown() {
-	xxx_messageInfo_DataFullReq.DiscardUnknown(m)
+func (m *AdminDataFullReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_AdminDataFullReq.DiscardUnknown(m)
 }
 
-var xxx_messageInfo_DataFullReq proto.InternalMessageInfo
+var xxx_messageInfo_AdminDataFullReq proto.InternalMessageInfo
 
-func (m *DataFullReq) GetUid() int64 {
+func (m *AdminDataFullReq) GetUid() int64 {
 	if m != nil {
 		return m.Uid
 	}
 	return 0
 }
 
-func (m *DataFullReq) GetName() string {
+func (m *AdminDataFullReq) GetName() string {
 	if m != nil {
 		return m.Name
 	}
 	return ""
 }
 
-func (m *DataFullReq) GetAvatar() string {
+func (m *AdminDataFullReq) GetAvatar() string {
 	if m != nil {
 		return m.Avatar
 	}
 	return ""
 }
 
-func (m *DataFullReq) GetPassword() string {
+func (m *AdminDataFullReq) GetPassword() string {
 	if m != nil {
 		return m.Password
 	}
@@ -535,49 +535,184 @@ func (m *Res) GetMsg() string {
 	return ""
 }
 
+type ClientUserWechatLoginReq struct {
+	Code                 string   `protobuf:"bytes,1,opt,name=code,proto3" json:"code,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ClientUserWechatLoginReq) Reset()         { *m = ClientUserWechatLoginReq{} }
+func (m *ClientUserWechatLoginReq) String() string { return proto.CompactTextString(m) }
+func (*ClientUserWechatLoginReq) ProtoMessage()    {}
+func (*ClientUserWechatLoginReq) Descriptor() ([]byte, []int) {
+	return fileDescriptor_ef32c37ea206d67b, []int{9}
+}
+
+func (m *ClientUserWechatLoginReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ClientUserWechatLoginReq.Unmarshal(m, b)
+}
+func (m *ClientUserWechatLoginReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ClientUserWechatLoginReq.Marshal(b, m, deterministic)
+}
+func (m *ClientUserWechatLoginReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ClientUserWechatLoginReq.Merge(m, src)
+}
+func (m *ClientUserWechatLoginReq) XXX_Size() int {
+	return xxx_messageInfo_ClientUserWechatLoginReq.Size(m)
+}
+func (m *ClientUserWechatLoginReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_ClientUserWechatLoginReq.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ClientUserWechatLoginReq proto.InternalMessageInfo
+
+func (m *ClientUserWechatLoginReq) GetCode() string {
+	if m != nil {
+		return m.Code
+	}
+	return ""
+}
+
+type ClientUserWechatLoginRes struct {
+	Token                string   `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
+	Uid                  int64    `protobuf:"varint,2,opt,name=uid,proto3" json:"uid,omitempty"`
+	Openid               string   `protobuf:"bytes,3,opt,name=openid,proto3" json:"openid,omitempty"`
+	Avatar               string   `protobuf:"bytes,4,opt,name=avatar,proto3" json:"avatar,omitempty"`
+	Nickname             string   `protobuf:"bytes,5,opt,name=nickname,proto3" json:"nickname,omitempty"`
+	Code                 int32    `protobuf:"varint,6,opt,name=code,proto3" json:"code,omitempty"`
+	Msg                  string   `protobuf:"bytes,7,opt,name=msg,proto3" json:"msg,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ClientUserWechatLoginRes) Reset()         { *m = ClientUserWechatLoginRes{} }
+func (m *ClientUserWechatLoginRes) String() string { return proto.CompactTextString(m) }
+func (*ClientUserWechatLoginRes) ProtoMessage()    {}
+func (*ClientUserWechatLoginRes) Descriptor() ([]byte, []int) {
+	return fileDescriptor_ef32c37ea206d67b, []int{10}
+}
+
+func (m *ClientUserWechatLoginRes) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ClientUserWechatLoginRes.Unmarshal(m, b)
+}
+func (m *ClientUserWechatLoginRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ClientUserWechatLoginRes.Marshal(b, m, deterministic)
+}
+func (m *ClientUserWechatLoginRes) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ClientUserWechatLoginRes.Merge(m, src)
+}
+func (m *ClientUserWechatLoginRes) XXX_Size() int {
+	return xxx_messageInfo_ClientUserWechatLoginRes.Size(m)
+}
+func (m *ClientUserWechatLoginRes) XXX_DiscardUnknown() {
+	xxx_messageInfo_ClientUserWechatLoginRes.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ClientUserWechatLoginRes proto.InternalMessageInfo
+
+func (m *ClientUserWechatLoginRes) GetToken() string {
+	if m != nil {
+		return m.Token
+	}
+	return ""
+}
+
+func (m *ClientUserWechatLoginRes) GetUid() int64 {
+	if m != nil {
+		return m.Uid
+	}
+	return 0
+}
+
+func (m *ClientUserWechatLoginRes) GetOpenid() string {
+	if m != nil {
+		return m.Openid
+	}
+	return ""
+}
+
+func (m *ClientUserWechatLoginRes) GetAvatar() string {
+	if m != nil {
+		return m.Avatar
+	}
+	return ""
+}
+
+func (m *ClientUserWechatLoginRes) GetNickname() string {
+	if m != nil {
+		return m.Nickname
+	}
+	return ""
+}
+
+func (m *ClientUserWechatLoginRes) GetCode() int32 {
+	if m != nil {
+		return m.Code
+	}
+	return 0
+}
+
+func (m *ClientUserWechatLoginRes) GetMsg() string {
+	if m != nil {
+		return m.Msg
+	}
+	return ""
+}
+
 func init() {
-	proto.RegisterType((*SendEmailCodeReq)(nil), "send_email_code_req")
-	proto.RegisterType((*SendEmailCodeRes)(nil), "send_email_code_res")
-	proto.RegisterType((*RegisterReq)(nil), "register_req")
-	proto.RegisterType((*RegisterRes)(nil), "register_res")
-	proto.RegisterType((*LoginReq)(nil), "login_req")
-	proto.RegisterType((*PasswordBackReq)(nil), "password_back_req")
-	proto.RegisterType((*PasswordBackRes)(nil), "password_back_res")
-	proto.RegisterType((*DataFullReq)(nil), "data_full_req")
+	proto.RegisterType((*AdminSendEmailCodeReq)(nil), "admin_send_email_code_req")
+	proto.RegisterType((*AdminSendEmailCodeRes)(nil), "admin_send_email_code_res")
+	proto.RegisterType((*AdminRegisterReq)(nil), "admin_register_req")
+	proto.RegisterType((*AdminRegisterRes)(nil), "admin_register_res")
+	proto.RegisterType((*AdminLoginReq)(nil), "admin_login_req")
+	proto.RegisterType((*AdminPasswordBackReq)(nil), "admin_password_back_req")
+	proto.RegisterType((*AdminPasswordBackRes)(nil), "admin_password_back_res")
+	proto.RegisterType((*AdminDataFullReq)(nil), "admin_data_full_req")
 	proto.RegisterType((*Res)(nil), "res")
+	proto.RegisterType((*ClientUserWechatLoginReq)(nil), "client_user_wechat_login_req")
+	proto.RegisterType((*ClientUserWechatLoginRes)(nil), "client_user_wechat_login_res")
 }
 
 func init() { proto.RegisterFile("api/proto/proto.proto", fileDescriptor_ef32c37ea206d67b) }
 
 var fileDescriptor_ef32c37ea206d67b = []byte{
-	// 420 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x54, 0xcf, 0xcf, 0xd2, 0x40,
-	0x10, 0xb5, 0x5f, 0x5b, 0x3e, 0x3a, 0x5a, 0x7f, 0xac, 0x68, 0x36, 0x4d, 0x4c, 0xc8, 0xea, 0xc1,
-	0x68, 0x52, 0x13, 0xbd, 0x48, 0x8c, 0x21, 0x78, 0xf6, 0xc4, 0x4d, 0x2f, 0xcd, 0x42, 0x17, 0xd2,
-	0xd0, 0x76, 0x71, 0x77, 0xd1, 0x3f, 0xdd, 0x78, 0x33, 0x33, 0x2d, 0x48, 0x69, 0x35, 0x78, 0x29,
-	0x6f, 0x1e, 0x33, 0x6f, 0x86, 0x79, 0x43, 0xe1, 0x89, 0xdc, 0x17, 0x6f, 0xf6, 0x46, 0x3b, 0xdd,
-	0x3c, 0x53, 0x7a, 0x8a, 0x39, 0x3c, 0xb6, 0xaa, 0xce, 0x33, 0x55, 0xc9, 0xa2, 0xcc, 0xd6, 0x3a,
-	0x57, 0x99, 0x51, 0xdf, 0xd8, 0x04, 0x42, 0x62, 0xb8, 0x37, 0xf5, 0x5e, 0x46, 0xcb, 0x26, 0x60,
-	0x0c, 0x82, 0x8d, 0xd1, 0x15, 0xbf, 0x21, 0x92, 0xb0, 0xf8, 0x30, 0x24, 0x60, 0x31, 0x15, 0x31,
-	0xd5, 0xfb, 0x4b, 0xc2, 0xec, 0x21, 0xf8, 0x95, 0xdd, 0xb6, 0xd5, 0x08, 0xc5, 0x7b, 0xb8, 0x67,
-	0xd4, 0xb6, 0xb0, 0x4e, 0x99, 0x7f, 0xb7, 0x25, 0xad, 0xb6, 0x2d, 0x62, 0xf1, 0xd3, 0xeb, 0x94,
-	0x5e, 0xd9, 0x10, 0x99, 0x43, 0x91, 0x73, 0x9f, 0x92, 0x10, 0x62, 0x5d, 0x2d, 0x2b, 0xc5, 0x83,
-	0x46, 0x1c, 0x31, 0x7b, 0x0a, 0x23, 0xf9, 0x5d, 0x3a, 0x69, 0x78, 0x48, 0x6c, 0x1b, 0xfd, 0x19,
-	0x6f, 0x74, 0x3e, 0x9e, 0x80, 0xb8, 0x94, 0xd6, 0x65, 0xa5, 0xde, 0x16, 0x75, 0x26, 0x1d, 0xbf,
-	0xa5, 0x6f, 0xef, 0x22, 0xf9, 0x19, 0xb9, 0x85, 0x63, 0xcf, 0x00, 0xd6, 0x46, 0x49, 0xa7, 0x72,
-	0x4c, 0x18, 0x53, 0x42, 0xd4, 0x32, 0x0b, 0x87, 0xc2, 0x4e, 0xef, 0x54, 0xcd, 0xa3, 0x46, 0x98,
-	0x02, 0x64, 0x8d, 0x2e, 0x95, 0xe5, 0x30, 0xf5, 0x91, 0xa5, 0x40, 0x7c, 0x84, 0xa8, 0xe9, 0xf4,
-	0xf7, 0x85, 0x25, 0x30, 0xde, 0x4b, 0x6b, 0x7f, 0x68, 0x93, 0xb7, 0x3f, 0xfe, 0x14, 0x8b, 0x2f,
-	0xf0, 0xe8, 0x88, 0xb3, 0x95, 0x5c, 0xef, 0xfe, 0x6f, 0xef, 0x1d, 0x69, 0xff, 0x42, 0x7a, 0xd6,
-	0x97, 0xbe, 0xf6, 0x10, 0x0a, 0x88, 0x73, 0xe9, 0x64, 0xb6, 0x39, 0x94, 0x25, 0x4d, 0xd4, 0x1a,
-	0xe5, 0xf5, 0x8d, 0xba, 0x19, 0x34, 0xca, 0xef, 0x18, 0x75, 0x3e, 0x65, 0x70, 0x31, 0xe5, 0x6b,
-	0xf0, 0xaf, 0x9e, 0xeb, 0xed, 0x2f, 0x0f, 0x82, 0x83, 0x55, 0x86, 0xcd, 0xe1, 0xc1, 0xc5, 0x99,
-	0xb3, 0x49, 0x3a, 0xf0, 0xcf, 0x49, 0x86, 0x58, 0x2b, 0xee, 0xb0, 0x57, 0x30, 0x3e, 0xde, 0x2b,
-	0x8b, 0xd3, 0xf3, 0xab, 0x4f, 0x3a, 0x21, 0xe6, 0xbe, 0x80, 0x90, 0x2c, 0x66, 0x90, 0x9e, 0xac,
-	0xee, 0x67, 0xcd, 0x20, 0xee, 0xac, 0x9b, 0xb1, 0xb4, 0xe7, 0x6c, 0xd2, 0xe7, 0xb0, 0xf4, 0x39,
-	0x44, 0xa7, 0x75, 0xb3, 0xfb, 0x69, 0x67, 0xf5, 0x49, 0x90, 0x52, 0xd2, 0xa7, 0xdb, 0xaf, 0x21,
-	0xbd, 0x23, 0x56, 0x23, 0xfa, 0x78, 0xf7, 0x3b, 0x00, 0x00, 0xff, 0xff, 0xc3, 0xa2, 0xf3, 0x58,
-	0x43, 0x04, 0x00, 0x00,
+	// 531 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x54, 0x5f, 0x6f, 0xd3, 0x30,
+	0x10, 0x5f, 0x9a, 0xb4, 0x5d, 0x6f, 0x02, 0x26, 0xef, 0x0f, 0x26, 0x62, 0xd2, 0x94, 0x27, 0x24,
+	0xa4, 0x4c, 0x1a, 0x12, 0x4f, 0x08, 0x54, 0x10, 0x4f, 0xf0, 0xc2, 0x1e, 0xf7, 0x62, 0x79, 0x89,
+	0x57, 0xa2, 0x26, 0x71, 0xb1, 0x5d, 0xf6, 0x99, 0xf8, 0x06, 0x7c, 0x39, 0x24, 0x74, 0x76, 0x92,
+	0x26, 0x5d, 0x52, 0x75, 0x2f, 0xed, 0xdd, 0xcf, 0xb9, 0xdf, 0xdd, 0xf9, 0x7e, 0x67, 0x38, 0xe3,
+	0xab, 0xec, 0x6a, 0xa5, 0xa4, 0x91, 0xee, 0x37, 0xb6, 0xbf, 0xd1, 0x57, 0x78, 0xc5, 0xd3, 0x22,
+	0x2b, 0x99, 0x16, 0x65, 0xca, 0x44, 0xc1, 0xb3, 0x9c, 0x25, 0x32, 0x15, 0x4c, 0x89, 0x5f, 0xe4,
+	0x14, 0xc6, 0x16, 0xa1, 0xde, 0xa5, 0xf7, 0x66, 0x76, 0xe3, 0x1c, 0x42, 0x20, 0xb8, 0x57, 0xb2,
+	0xa0, 0x23, 0x0b, 0x5a, 0x3b, 0x9a, 0x0f, 0xd3, 0x68, 0x0c, 0x40, 0xdb, 0xb2, 0xf8, 0x37, 0xd6,
+	0x26, 0xc7, 0xe0, 0x17, 0x7a, 0x51, 0x71, 0xa0, 0x19, 0x7d, 0x04, 0xe2, 0x28, 0x94, 0x58, 0x64,
+	0xda, 0x08, 0xb5, 0xbb, 0x04, 0xcb, 0x58, 0x95, 0x80, 0x76, 0xf4, 0xcf, 0xeb, 0x21, 0xd8, 0x33,
+	0x39, 0x22, 0xeb, 0x2c, 0xa5, 0xbe, 0xfd, 0x08, 0x4d, 0x8c, 0x2b, 0x79, 0x21, 0x68, 0xe0, 0x52,
+	0xa0, 0x4d, 0xce, 0x61, 0xc2, 0x7f, 0x73, 0xc3, 0x15, 0x1d, 0x5b, 0xb4, 0xf2, 0x36, 0x45, 0x4e,
+	0xda, 0x45, 0x46, 0xf0, 0x2c, 0xe7, 0xda, 0xb0, 0x5c, 0x2e, 0xb2, 0x92, 0x71, 0x43, 0xa7, 0xf6,
+	0xf4, 0x08, 0xc1, 0xef, 0x88, 0xcd, 0x0d, 0xb9, 0x00, 0x48, 0x94, 0xe0, 0x46, 0xa4, 0xf8, 0xc1,
+	0xa1, 0xfd, 0x60, 0x56, 0x21, 0x73, 0x83, 0xc4, 0x46, 0x2e, 0x45, 0x49, 0x67, 0x8e, 0xd8, 0x3a,
+	0x88, 0x2a, 0x99, 0x0b, 0x4d, 0xe1, 0xd2, 0x47, 0xd4, 0x3a, 0xd1, 0x17, 0x78, 0xe1, 0xda, 0x77,
+	0xf9, 0x86, 0x2f, 0x2f, 0x84, 0xc3, 0x15, 0xd7, 0xfa, 0x41, 0xaa, 0xb4, 0xba, 0x82, 0xc6, 0x8f,
+	0x18, 0xbc, 0x74, 0x24, 0x35, 0xc2, 0xee, 0x78, 0xb2, 0x7c, 0xda, 0x24, 0x3a, 0x09, 0xfc, 0xad,
+	0x04, 0x9f, 0x86, 0x12, 0xec, 0x2b, 0x13, 0x09, 0x27, 0x8e, 0x20, 0xe5, 0x86, 0xb3, 0xfb, 0x75,
+	0x9e, 0xdb, 0xea, 0xaa, 0x01, 0x7a, 0x8f, 0x07, 0x38, 0xea, 0x1d, 0xa0, 0xdf, 0x19, 0x60, 0xbb,
+	0xe2, 0x60, 0xab, 0xe2, 0xb7, 0xe0, 0xef, 0x5f, 0xdd, 0x35, 0xbc, 0x4e, 0xf2, 0x4c, 0x94, 0x86,
+	0xad, 0xb5, 0x50, 0xec, 0x41, 0x24, 0x3f, 0xb9, 0x69, 0x4d, 0xa4, 0xcd, 0x52, 0x0b, 0xf7, 0xaf,
+	0xb7, 0x33, 0x48, 0x6f, 0x54, 0xe0, 0xb5, 0x55, 0x50, 0x75, 0x3c, 0xda, 0x74, 0x7c, 0x0e, 0x13,
+	0xb9, 0x12, 0x65, 0x56, 0xdf, 0x7a, 0xe5, 0xb5, 0xba, 0x0e, 0xb6, 0xbb, 0x2e, 0xb3, 0x64, 0x69,
+	0x6f, 0xc9, 0x09, 0xba, 0xf1, 0x9b, 0x42, 0x51, 0xd1, 0xe3, 0x6e, 0xbb, 0xd3, 0xa6, 0xdd, 0xeb,
+	0x3f, 0x3e, 0x04, 0x58, 0x33, 0xf9, 0x01, 0x67, 0xbd, 0xfb, 0x4f, 0xc2, 0x78, 0xf0, 0x79, 0x09,
+	0x87, 0xcf, 0x74, 0x74, 0x40, 0x3e, 0xc0, 0xf3, 0xee, 0x3a, 0x93, 0x93, 0xf8, 0xf1, 0x03, 0x11,
+	0xf6, 0x80, 0x18, 0xfd, 0x1e, 0x8e, 0x5a, 0xdb, 0x40, 0x8e, 0xe3, 0xad, 0xdd, 0x18, 0x8a, 0xfb,
+	0x56, 0xcb, 0xab, 0xa3, 0x4f, 0x42, 0xe3, 0x81, 0xb5, 0x08, 0x87, 0x4e, 0x90, 0xec, 0xaa, 0x5e,
+	0xc9, 0x46, 0xab, 0xe4, 0x34, 0xee, 0x51, 0x6f, 0x18, 0xc4, 0x2e, 0xe0, 0x16, 0xe8, 0x90, 0x12,
+	0xc8, 0x45, 0xbc, 0x4b, 0x59, 0xe1, 0xce, 0x63, 0x1d, 0x1d, 0x7c, 0x9e, 0xde, 0x8e, 0xed, 0x93,
+	0x7f, 0x37, 0xb1, 0x7f, 0xef, 0xfe, 0x07, 0x00, 0x00, 0xff, 0xff, 0x0b, 0xb6, 0xf8, 0xf3, 0x12,
+	0x06, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -592,11 +727,12 @@ const _ = grpc.SupportPackageIsVersion4
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
 type UserClient interface {
-	SendEmailCode(ctx context.Context, in *SendEmailCodeReq, opts ...grpc.CallOption) (*SendEmailCodeRes, error)
-	Register(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*RegisterRes, error)
-	Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*RegisterRes, error)
-	PasswordBack(ctx context.Context, in *PasswordBackReq, opts ...grpc.CallOption) (*PasswordBackRes, error)
-	DataFull(ctx context.Context, in *DataFullReq, opts ...grpc.CallOption) (*Res, error)
+	AdminSendEmailCode(ctx context.Context, in *AdminSendEmailCodeReq, opts ...grpc.CallOption) (*AdminSendEmailCodeRes, error)
+	AdminRegister(ctx context.Context, in *AdminRegisterReq, opts ...grpc.CallOption) (*AdminRegisterRes, error)
+	AdminLogin(ctx context.Context, in *AdminLoginReq, opts ...grpc.CallOption) (*AdminRegisterRes, error)
+	AdminPasswordBack(ctx context.Context, in *AdminPasswordBackReq, opts ...grpc.CallOption) (*AdminPasswordBackRes, error)
+	AdminDataFull(ctx context.Context, in *AdminDataFullReq, opts ...grpc.CallOption) (*Res, error)
+	ClientUserWechatLogin(ctx context.Context, in *ClientUserWechatLoginReq, opts ...grpc.CallOption) (*ClientUserWechatLoginRes, error)
 }
 
 type userClient struct {
@@ -607,45 +743,54 @@ func NewUserClient(cc *grpc.ClientConn) UserClient {
 	return &userClient{cc}
 }
 
-func (c *userClient) SendEmailCode(ctx context.Context, in *SendEmailCodeReq, opts ...grpc.CallOption) (*SendEmailCodeRes, error) {
-	out := new(SendEmailCodeRes)
-	err := c.cc.Invoke(ctx, "/user/send_email_code", in, out, opts...)
+func (c *userClient) AdminSendEmailCode(ctx context.Context, in *AdminSendEmailCodeReq, opts ...grpc.CallOption) (*AdminSendEmailCodeRes, error) {
+	out := new(AdminSendEmailCodeRes)
+	err := c.cc.Invoke(ctx, "/user/admin_send_email_code", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) Register(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*RegisterRes, error) {
-	out := new(RegisterRes)
-	err := c.cc.Invoke(ctx, "/user/register", in, out, opts...)
+func (c *userClient) AdminRegister(ctx context.Context, in *AdminRegisterReq, opts ...grpc.CallOption) (*AdminRegisterRes, error) {
+	out := new(AdminRegisterRes)
+	err := c.cc.Invoke(ctx, "/user/admin_register", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) Login(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*RegisterRes, error) {
-	out := new(RegisterRes)
-	err := c.cc.Invoke(ctx, "/user/login", in, out, opts...)
+func (c *userClient) AdminLogin(ctx context.Context, in *AdminLoginReq, opts ...grpc.CallOption) (*AdminRegisterRes, error) {
+	out := new(AdminRegisterRes)
+	err := c.cc.Invoke(ctx, "/user/admin_login", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) PasswordBack(ctx context.Context, in *PasswordBackReq, opts ...grpc.CallOption) (*PasswordBackRes, error) {
-	out := new(PasswordBackRes)
-	err := c.cc.Invoke(ctx, "/user/password_back", in, out, opts...)
+func (c *userClient) AdminPasswordBack(ctx context.Context, in *AdminPasswordBackReq, opts ...grpc.CallOption) (*AdminPasswordBackRes, error) {
+	out := new(AdminPasswordBackRes)
+	err := c.cc.Invoke(ctx, "/user/admin_password_back", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-func (c *userClient) DataFull(ctx context.Context, in *DataFullReq, opts ...grpc.CallOption) (*Res, error) {
+func (c *userClient) AdminDataFull(ctx context.Context, in *AdminDataFullReq, opts ...grpc.CallOption) (*Res, error) {
 	out := new(Res)
-	err := c.cc.Invoke(ctx, "/user/data_full", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/user/admin_data_full", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) ClientUserWechatLogin(ctx context.Context, in *ClientUserWechatLoginReq, opts ...grpc.CallOption) (*ClientUserWechatLoginRes, error) {
+	out := new(ClientUserWechatLoginRes)
+	err := c.cc.Invoke(ctx, "/user/client_user_wechat_login", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -654,123 +799,145 @@ func (c *userClient) DataFull(ctx context.Context, in *DataFullReq, opts ...grpc
 
 // UserServer is the server API for User service.
 type UserServer interface {
-	SendEmailCode(context.Context, *SendEmailCodeReq) (*SendEmailCodeRes, error)
-	Register(context.Context, *RegisterReq) (*RegisterRes, error)
-	Login(context.Context, *LoginReq) (*RegisterRes, error)
-	PasswordBack(context.Context, *PasswordBackReq) (*PasswordBackRes, error)
-	DataFull(context.Context, *DataFullReq) (*Res, error)
+	AdminSendEmailCode(context.Context, *AdminSendEmailCodeReq) (*AdminSendEmailCodeRes, error)
+	AdminRegister(context.Context, *AdminRegisterReq) (*AdminRegisterRes, error)
+	AdminLogin(context.Context, *AdminLoginReq) (*AdminRegisterRes, error)
+	AdminPasswordBack(context.Context, *AdminPasswordBackReq) (*AdminPasswordBackRes, error)
+	AdminDataFull(context.Context, *AdminDataFullReq) (*Res, error)
+	ClientUserWechatLogin(context.Context, *ClientUserWechatLoginReq) (*ClientUserWechatLoginRes, error)
 }
 
 // UnimplementedUserServer can be embedded to have forward compatible implementations.
 type UnimplementedUserServer struct {
 }
 
-func (*UnimplementedUserServer) SendEmailCode(ctx context.Context, req *SendEmailCodeReq) (*SendEmailCodeRes, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method SendEmailCode not implemented")
+func (*UnimplementedUserServer) AdminSendEmailCode(ctx context.Context, req *AdminSendEmailCodeReq) (*AdminSendEmailCodeRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AdminSendEmailCode not implemented")
 }
-func (*UnimplementedUserServer) Register(ctx context.Context, req *RegisterReq) (*RegisterRes, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Register not implemented")
+func (*UnimplementedUserServer) AdminRegister(ctx context.Context, req *AdminRegisterReq) (*AdminRegisterRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AdminRegister not implemented")
 }
-func (*UnimplementedUserServer) Login(ctx context.Context, req *LoginReq) (*RegisterRes, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method Login not implemented")
+func (*UnimplementedUserServer) AdminLogin(ctx context.Context, req *AdminLoginReq) (*AdminRegisterRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AdminLogin not implemented")
 }
-func (*UnimplementedUserServer) PasswordBack(ctx context.Context, req *PasswordBackReq) (*PasswordBackRes, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method PasswordBack not implemented")
+func (*UnimplementedUserServer) AdminPasswordBack(ctx context.Context, req *AdminPasswordBackReq) (*AdminPasswordBackRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AdminPasswordBack not implemented")
 }
-func (*UnimplementedUserServer) DataFull(ctx context.Context, req *DataFullReq) (*Res, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method DataFull not implemented")
+func (*UnimplementedUserServer) AdminDataFull(ctx context.Context, req *AdminDataFullReq) (*Res, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AdminDataFull not implemented")
+}
+func (*UnimplementedUserServer) ClientUserWechatLogin(ctx context.Context, req *ClientUserWechatLoginReq) (*ClientUserWechatLoginRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClientUserWechatLogin not implemented")
 }
 
 func RegisterUserServer(s *grpc.Server, srv UserServer) {
 	s.RegisterService(&_User_serviceDesc, srv)
 }
 
-func _User_SendEmailCode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(SendEmailCodeReq)
+func _User_AdminSendEmailCode_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AdminSendEmailCodeReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).SendEmailCode(ctx, in)
+		return srv.(UserServer).AdminSendEmailCode(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/user/SendEmailCode",
+		FullMethod: "/user/AdminSendEmailCode",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).SendEmailCode(ctx, req.(*SendEmailCodeReq))
+		return srv.(UserServer).AdminSendEmailCode(ctx, req.(*AdminSendEmailCodeReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_Register_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RegisterReq)
+func _User_AdminRegister_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AdminRegisterReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).Register(ctx, in)
+		return srv.(UserServer).AdminRegister(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/user/Register",
+		FullMethod: "/user/AdminRegister",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).Register(ctx, req.(*RegisterReq))
+		return srv.(UserServer).AdminRegister(ctx, req.(*AdminRegisterReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_Login_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(LoginReq)
+func _User_AdminLogin_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AdminLoginReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).Login(ctx, in)
+		return srv.(UserServer).AdminLogin(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/user/Login",
+		FullMethod: "/user/AdminLogin",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).Login(ctx, req.(*LoginReq))
+		return srv.(UserServer).AdminLogin(ctx, req.(*AdminLoginReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_PasswordBack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(PasswordBackReq)
+func _User_AdminPasswordBack_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AdminPasswordBackReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).PasswordBack(ctx, in)
+		return srv.(UserServer).AdminPasswordBack(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/user/PasswordBack",
+		FullMethod: "/user/AdminPasswordBack",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).PasswordBack(ctx, req.(*PasswordBackReq))
+		return srv.(UserServer).AdminPasswordBack(ctx, req.(*AdminPasswordBackReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_DataFull_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(DataFullReq)
+func _User_AdminDataFull_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AdminDataFullReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).DataFull(ctx, in)
+		return srv.(UserServer).AdminDataFull(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/user/DataFull",
+		FullMethod: "/user/AdminDataFull",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).DataFull(ctx, req.(*DataFullReq))
+		return srv.(UserServer).AdminDataFull(ctx, req.(*AdminDataFullReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_ClientUserWechatLogin_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ClientUserWechatLoginReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).ClientUserWechatLogin(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/user/ClientUserWechatLogin",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).ClientUserWechatLogin(ctx, req.(*ClientUserWechatLoginReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -780,24 +947,28 @@ var _User_serviceDesc = grpc.ServiceDesc{
 	HandlerType: (*UserServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "send_email_code",
-			Handler:    _User_SendEmailCode_Handler,
+			MethodName: "admin_send_email_code",
+			Handler:    _User_AdminSendEmailCode_Handler,
 		},
 		{
-			MethodName: "register",
-			Handler:    _User_Register_Handler,
+			MethodName: "admin_register",
+			Handler:    _User_AdminRegister_Handler,
 		},
 		{
-			MethodName: "login",
-			Handler:    _User_Login_Handler,
+			MethodName: "admin_login",
+			Handler:    _User_AdminLogin_Handler,
 		},
 		{
-			MethodName: "password_back",
-			Handler:    _User_PasswordBack_Handler,
+			MethodName: "admin_password_back",
+			Handler:    _User_AdminPasswordBack_Handler,
 		},
 		{
-			MethodName: "data_full",
-			Handler:    _User_DataFull_Handler,
+			MethodName: "admin_data_full",
+			Handler:    _User_AdminDataFull_Handler,
+		},
+		{
+			MethodName: "client_user_wechat_login",
+			Handler:    _User_ClientUserWechatLogin_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

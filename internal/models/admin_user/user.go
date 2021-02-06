@@ -1,4 +1,4 @@
-package user
+package admin_user
 
 import (
 	"fmt"
@@ -39,7 +39,7 @@ type Model struct {
 func NewModel(db *gorm.DB) *Model {
 	return &Model{
 		Db:   db,
-		Name: "users",
+		Name: "admin_user",
 	}
 }
 

@@ -3,29 +3,30 @@ syntax = "proto3";
 option go_package = "proto";
 
 service user {
-  rpc send_email_code(send_email_code_req) returns (send_email_code_res) {}
-  rpc register(register_req) returns (register_res) {}
-  rpc login(login_req) returns (register_res) {}
-  rpc password_back(password_back_req) returns (password_back_res) {}
-  rpc data_full(data_full_req) returns (res) {}
+  rpc admin_send_email_code(admin_send_email_code_req) returns (admin_send_email_code_res) {}
+  rpc admin_register(admin_register_req) returns (admin_register_res) {}
+  rpc admin_login(admin_login_req) returns (admin_register_res) {}
+  rpc admin_password_back(admin_password_back_req) returns (admin_password_back_res) {}
+  rpc admin_data_full(admin_data_full_req) returns (res) {}
+  rpc client_user_wechat_login(client_user_wechat_login_req) returns (client_user_wechat_login_res) {}
 }
 
-message send_email_code_req {
+message admin_send_email_code_req {
   string email = 1;
   string from = 2;
 }
 
-message send_email_code_res {
+message admin_send_email_code_res {
   int64 code = 1;
   string msg = 2;
 }
 
-message register_req {
+message admin_register_req {
   string email = 1;
   string code = 2;
 }
 
-message register_res {
+message admin_register_res {
   int64 code = 1;
   string msg = 2;
   int64 uid = 3;
@@ -38,23 +39,23 @@ message register_res {
   repeated string roles = 10;
 }
 
-message login_req {
+message admin_login_req {
   string email = 1;
   string password = 2;
 }
 
-message password_back_req{
+message admin_password_back_req{
   string email = 1;
   string code = 2;
   string password = 3;
 }
 
-message password_back_res{
+message admin_password_back_res{
   int64 code = 1;
   string msg = 2;
 }
 
-message data_full_req{
+message admin_data_full_req{
   int64 uid = 1;
   string name = 2;
   string avatar = 3;
@@ -64,6 +65,20 @@ message data_full_req{
 message res{
   int64 code = 1;
   string msg = 2;
+}
+
+message client_user_wechat_login_req{
+  string code = 1;
+}
+
+message client_user_wechat_login_res{
+  string token = 1;
+  int64 uid = 2;
+  string openid = 3;
+  string avatar = 4;
+  string nickname = 5;
+  int32 code = 6;
+  string msg = 7;
 }
 
 

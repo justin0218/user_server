@@ -1,18 +1,18 @@
 package api
 
 import (
-	"user_server/api/proto"
-	"user_server/internal/models/user"
 	"context"
+	"user_server/api/proto"
+	"user_server/internal/models/admin_user"
 )
 
-func (s *UserSvr) SendEmailCode(ctx context.Context, req *proto.SendEmailCodeReq) (*proto.SendEmailCodeRes, error) {
-	ret := &proto.SendEmailCodeRes{Code: 400}
+func (s *UserSvr) AdminSendEmailCode(ctx context.Context, req *proto.AdminSendEmailCodeReq) (*proto.AdminSendEmailCodeRes, error) {
+	ret := &proto.AdminSendEmailCodeRes{Code: 400}
 	if req.Email == "" {
 		ret.Msg = "邮箱发送失败，请检查邮箱是否正确"
 		return ret, nil
 	}
-	e := s.userService.SendEmailCode(req.Email, req.From)
+	e := s.AdminUserService.SendEmailCode(req.Email, req.From)
 	if e != nil {
 		ret.Msg = e.Error()
 		return ret, nil
@@ -21,13 +21,13 @@ func (s *UserSvr) SendEmailCode(ctx context.Context, req *proto.SendEmailCodeReq
 	return ret, nil
 }
 
-func (s *UserSvr) Register(ctx context.Context, req *proto.RegisterReq) (*proto.RegisterRes, error) {
-	ret := &proto.RegisterRes{Code: 400}
+func (s *UserSvr) AdminRegister(ctx context.Context, req *proto.AdminRegisterReq) (*proto.AdminRegisterRes, error) {
+	ret := &proto.AdminRegisterRes{Code: 400}
 	if req.Email == "" {
 		ret.Msg = "邮箱发送失败，请检查邮箱是否正确"
 		return ret, nil
 	}
-	r, e := s.userService.Register(req.Email, req.Code)
+	r, e := s.AdminUserService.Register(req.Email, req.Code)
 	if e != nil {
 		ret.Msg = e.Error()
 		return ret, nil
@@ -36,13 +36,13 @@ func (s *UserSvr) Register(ctx context.Context, req *proto.RegisterReq) (*proto.
 	return r, nil
 }
 
-func (s *UserSvr) Login(ctx context.Context, req *proto.LoginReq) (*proto.RegisterRes, error) {
-	ret := &proto.RegisterRes{Code: 400}
+func (s *UserSvr) AdminLogin(ctx context.Context, req *proto.AdminLoginReq) (*proto.AdminRegisterRes, error) {
+	ret := &proto.AdminRegisterRes{Code: 400}
 	if req.Email == "" {
 		ret.Msg = "邮箱发送失败，请检查邮箱是否正确"
 		return ret, nil
 	}
-	r, e := s.userService.Login(req.Email, req.Password)
+	r, e := s.AdminUserService.Login(req.Email, req.Password)
 	if e != nil {
 		ret.Msg = e.Error()
 		return ret, nil
@@ -51,13 +51,13 @@ func (s *UserSvr) Login(ctx context.Context, req *proto.LoginReq) (*proto.Regist
 	return r, nil
 }
 
-func (s *UserSvr) PasswordBack(ctx context.Context, req *proto.PasswordBackReq) (*proto.PasswordBackRes, error) {
-	ret := &proto.PasswordBackRes{Code: 400}
+func (s *UserSvr) AdminPasswordBack(ctx context.Context, req *proto.AdminPasswordBackReq) (*proto.AdminPasswordBackRes, error) {
+	ret := &proto.AdminPasswordBackRes{Code: 400}
 	if req.Email == "" {
 		ret.Msg = "请检查邮箱是否正确"
 		return ret, nil
 	}
-	e := s.userService.PasswordBack(req.Email, req.Code, req.Password)
+	e := s.AdminUserService.PasswordBack(req.Email, req.Code, req.Password)
 	if e != nil {
 		ret.Msg = e.Error()
 		return ret, nil
@@ -66,13 +66,13 @@ func (s *UserSvr) PasswordBack(ctx context.Context, req *proto.PasswordBackReq) 
 	return ret, nil
 }
 
-func (s *UserSvr) DataFull(ctx context.Context, req *proto.DataFullReq) (*proto.Res, error) {
+func (s *UserSvr) AdminDataFull(ctx context.Context, req *proto.AdminDataFullReq) (*proto.Res, error) {
 	ret := &proto.Res{Code: 400}
 	if req.Uid <= 0 || req.Name == "" || req.Avatar == "" || req.Password == "" {
 		ret.Msg = "参数错误"
 		return ret, nil
 	}
-	e := s.userService.DataFull(user.User{
+	e := s.AdminUserService.DataFull(admin_user.User{
 		Id:       int(req.Uid),
 		Name:     req.Name,
 		Avatar:   req.Avatar,
