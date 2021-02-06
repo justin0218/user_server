@@ -9,6 +9,7 @@ service user {
   rpc admin_password_back(admin_password_back_req) returns (admin_password_back_res) {}
   rpc admin_data_full(admin_data_full_req) returns (res) {}
   rpc client_user_wechat_login(client_user_wechat_login_req) returns (client_user_wechat_login_res) {}
+  rpc client_get_user_by_uid(client_get_user_by_uid_req) returns (client_get_user_by_uid_res) {}
 }
 
 message admin_send_email_code_req {
@@ -81,5 +82,17 @@ message client_user_wechat_login_res{
   string msg = 7;
 }
 
+message client_get_user_by_uid_req{
+  int64 uid = 1;
+}
+
+message client_get_user_by_uid_res{
+  int64 uid = 1;
+  string openid = 2;
+  string avatar = 3;
+  string nickname = 4;
+  int32 code = 5;
+  string msg = 6;
+}
 
 //protoc -I . --go_out=plugins=grpc:. api/proto/proto.proto

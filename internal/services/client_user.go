@@ -106,3 +106,18 @@ func (s *ClientUserService) Login(code string) (ret *proto.ClientUserWechatLogin
 	ret.Token = tokenRet.Token
 	return
 }
+
+func (s *ClientUserService) ClientGetUserByUid(uid int64) (ret *proto.ClientGetUserByUidRes, err error) {
+	ret = new(proto.ClientGetUserByUidRes)
+	clientUser := client_user.NewModel(s.Mysql.Get())
+	uinfo, e := clientUser.GetByUid(int(uid))
+	if e != nil {
+		err = e
+		return
+	}
+	ret.Nickname = uinfo.Nickname
+	ret.Openid = uinfo.Openid
+	ret.Avatar = uinfo.Avatar
+	ret.Uid = uid
+	return
+}
