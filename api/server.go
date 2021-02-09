@@ -10,7 +10,7 @@ import (
 )
 
 type UserSvr struct {
-	AdminUserService services.AdminUserService
+	//AdminUserService services.AdminUserService
 	ClientUserService services.ClientUserService
 }
 

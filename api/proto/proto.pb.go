@@ -535,130 +535,114 @@ func (m *Res) GetMsg() string {
 	return ""
 }
 
-type ClientUserWechatLoginReq struct {
-	Code                 string   `protobuf:"bytes,1,opt,name=code,proto3" json:"code,omitempty"`
+type ClientGetUserByOpenidReq struct {
+	Openid               string   `protobuf:"bytes,1,opt,name=openid,proto3" json:"openid,omitempty"`
 	XXX_NoUnkeyedLiteral struct{} `json:"-"`
 	XXX_unrecognized     []byte   `json:"-"`
 	XXX_sizecache        int32    `json:"-"`
 }
 
-func (m *ClientUserWechatLoginReq) Reset()         { *m = ClientUserWechatLoginReq{} }
-func (m *ClientUserWechatLoginReq) String() string { return proto.CompactTextString(m) }
-func (*ClientUserWechatLoginReq) ProtoMessage()    {}
-func (*ClientUserWechatLoginReq) Descriptor() ([]byte, []int) {
+func (m *ClientGetUserByOpenidReq) Reset()         { *m = ClientGetUserByOpenidReq{} }
+func (m *ClientGetUserByOpenidReq) String() string { return proto.CompactTextString(m) }
+func (*ClientGetUserByOpenidReq) ProtoMessage()    {}
+func (*ClientGetUserByOpenidReq) Descriptor() ([]byte, []int) {
 	return fileDescriptor_ef32c37ea206d67b, []int{9}
 }
 
-func (m *ClientUserWechatLoginReq) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ClientUserWechatLoginReq.Unmarshal(m, b)
+func (m *ClientGetUserByOpenidReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ClientGetUserByOpenidReq.Unmarshal(m, b)
 }
-func (m *ClientUserWechatLoginReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ClientUserWechatLoginReq.Marshal(b, m, deterministic)
+func (m *ClientGetUserByOpenidReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ClientGetUserByOpenidReq.Marshal(b, m, deterministic)
 }
-func (m *ClientUserWechatLoginReq) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ClientUserWechatLoginReq.Merge(m, src)
+func (m *ClientGetUserByOpenidReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ClientGetUserByOpenidReq.Merge(m, src)
 }
-func (m *ClientUserWechatLoginReq) XXX_Size() int {
-	return xxx_messageInfo_ClientUserWechatLoginReq.Size(m)
+func (m *ClientGetUserByOpenidReq) XXX_Size() int {
+	return xxx_messageInfo_ClientGetUserByOpenidReq.Size(m)
 }
-func (m *ClientUserWechatLoginReq) XXX_DiscardUnknown() {
-	xxx_messageInfo_ClientUserWechatLoginReq.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_ClientUserWechatLoginReq proto.InternalMessageInfo
-
-func (m *ClientUserWechatLoginReq) GetCode() string {
-	if m != nil {
-		return m.Code
-	}
-	return ""
+func (m *ClientGetUserByOpenidReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_ClientGetUserByOpenidReq.DiscardUnknown(m)
 }
 
-type ClientUserWechatLoginRes struct {
-	Token                string   `protobuf:"bytes,1,opt,name=token,proto3" json:"token,omitempty"`
-	Uid                  int64    `protobuf:"varint,2,opt,name=uid,proto3" json:"uid,omitempty"`
-	Openid               string   `protobuf:"bytes,3,opt,name=openid,proto3" json:"openid,omitempty"`
-	Avatar               string   `protobuf:"bytes,4,opt,name=avatar,proto3" json:"avatar,omitempty"`
-	Nickname             string   `protobuf:"bytes,5,opt,name=nickname,proto3" json:"nickname,omitempty"`
-	Code                 int32    `protobuf:"varint,6,opt,name=code,proto3" json:"code,omitempty"`
-	Msg                  string   `protobuf:"bytes,7,opt,name=msg,proto3" json:"msg,omitempty"`
-	XXX_NoUnkeyedLiteral struct{} `json:"-"`
-	XXX_unrecognized     []byte   `json:"-"`
-	XXX_sizecache        int32    `json:"-"`
-}
+var xxx_messageInfo_ClientGetUserByOpenidReq proto.InternalMessageInfo
 
-func (m *ClientUserWechatLoginRes) Reset()         { *m = ClientUserWechatLoginRes{} }
-func (m *ClientUserWechatLoginRes) String() string { return proto.CompactTextString(m) }
-func (*ClientUserWechatLoginRes) ProtoMessage()    {}
-func (*ClientUserWechatLoginRes) Descriptor() ([]byte, []int) {
-	return fileDescriptor_ef32c37ea206d67b, []int{10}
-}
-
-func (m *ClientUserWechatLoginRes) XXX_Unmarshal(b []byte) error {
-	return xxx_messageInfo_ClientUserWechatLoginRes.Unmarshal(m, b)
-}
-func (m *ClientUserWechatLoginRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
-	return xxx_messageInfo_ClientUserWechatLoginRes.Marshal(b, m, deterministic)
-}
-func (m *ClientUserWechatLoginRes) XXX_Merge(src proto.Message) {
-	xxx_messageInfo_ClientUserWechatLoginRes.Merge(m, src)
-}
-func (m *ClientUserWechatLoginRes) XXX_Size() int {
-	return xxx_messageInfo_ClientUserWechatLoginRes.Size(m)
-}
-func (m *ClientUserWechatLoginRes) XXX_DiscardUnknown() {
-	xxx_messageInfo_ClientUserWechatLoginRes.DiscardUnknown(m)
-}
-
-var xxx_messageInfo_ClientUserWechatLoginRes proto.InternalMessageInfo
-
-func (m *ClientUserWechatLoginRes) GetToken() string {
-	if m != nil {
-		return m.Token
-	}
-	return ""
-}
-
-func (m *ClientUserWechatLoginRes) GetUid() int64 {
-	if m != nil {
-		return m.Uid
-	}
-	return 0
-}
-
-func (m *ClientUserWechatLoginRes) GetOpenid() string {
+func (m *ClientGetUserByOpenidReq) GetOpenid() string {
 	if m != nil {
 		return m.Openid
 	}
 	return ""
 }
 
-func (m *ClientUserWechatLoginRes) GetAvatar() string {
+type ClientGetUserByOpenidRes struct {
+	Uid                  int64    `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
+	Openid               string   `protobuf:"bytes,2,opt,name=openid,proto3" json:"openid,omitempty"`
+	Avatar               string   `protobuf:"bytes,3,opt,name=avatar,proto3" json:"avatar,omitempty"`
+	Nickname             string   `protobuf:"bytes,4,opt,name=nickname,proto3" json:"nickname,omitempty"`
+	Code                 int32    `protobuf:"varint,5,opt,name=code,proto3" json:"code,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ClientGetUserByOpenidRes) Reset()         { *m = ClientGetUserByOpenidRes{} }
+func (m *ClientGetUserByOpenidRes) String() string { return proto.CompactTextString(m) }
+func (*ClientGetUserByOpenidRes) ProtoMessage()    {}
+func (*ClientGetUserByOpenidRes) Descriptor() ([]byte, []int) {
+	return fileDescriptor_ef32c37ea206d67b, []int{10}
+}
+
+func (m *ClientGetUserByOpenidRes) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ClientGetUserByOpenidRes.Unmarshal(m, b)
+}
+func (m *ClientGetUserByOpenidRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ClientGetUserByOpenidRes.Marshal(b, m, deterministic)
+}
+func (m *ClientGetUserByOpenidRes) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ClientGetUserByOpenidRes.Merge(m, src)
+}
+func (m *ClientGetUserByOpenidRes) XXX_Size() int {
+	return xxx_messageInfo_ClientGetUserByOpenidRes.Size(m)
+}
+func (m *ClientGetUserByOpenidRes) XXX_DiscardUnknown() {
+	xxx_messageInfo_ClientGetUserByOpenidRes.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ClientGetUserByOpenidRes proto.InternalMessageInfo
+
+func (m *ClientGetUserByOpenidRes) GetUid() int64 {
+	if m != nil {
+		return m.Uid
+	}
+	return 0
+}
+
+func (m *ClientGetUserByOpenidRes) GetOpenid() string {
+	if m != nil {
+		return m.Openid
+	}
+	return ""
+}
+
+func (m *ClientGetUserByOpenidRes) GetAvatar() string {
 	if m != nil {
 		return m.Avatar
 	}
 	return ""
 }
 
-func (m *ClientUserWechatLoginRes) GetNickname() string {
+func (m *ClientGetUserByOpenidRes) GetNickname() string {
 	if m != nil {
 		return m.Nickname
 	}
 	return ""
 }
 
-func (m *ClientUserWechatLoginRes) GetCode() int32 {
+func (m *ClientGetUserByOpenidRes) GetCode() int32 {
 	if m != nil {
 		return m.Code
 	}
 	return 0
-}
-
-func (m *ClientUserWechatLoginRes) GetMsg() string {
-	if m != nil {
-		return m.Msg
-	}
-	return ""
 }
 
 type ClientGetUserByUidReq struct {
@@ -779,6 +763,186 @@ func (m *ClientGetUserByUidRes) GetMsg() string {
 	return ""
 }
 
+type ClientCreateUserReq struct {
+	Openid               string   `protobuf:"bytes,1,opt,name=openid,proto3" json:"openid,omitempty"`
+	Avatar               string   `protobuf:"bytes,2,opt,name=avatar,proto3" json:"avatar,omitempty"`
+	Nickname             string   `protobuf:"bytes,3,opt,name=nickname,proto3" json:"nickname,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ClientCreateUserReq) Reset()         { *m = ClientCreateUserReq{} }
+func (m *ClientCreateUserReq) String() string { return proto.CompactTextString(m) }
+func (*ClientCreateUserReq) ProtoMessage()    {}
+func (*ClientCreateUserReq) Descriptor() ([]byte, []int) {
+	return fileDescriptor_ef32c37ea206d67b, []int{13}
+}
+
+func (m *ClientCreateUserReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ClientCreateUserReq.Unmarshal(m, b)
+}
+func (m *ClientCreateUserReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ClientCreateUserReq.Marshal(b, m, deterministic)
+}
+func (m *ClientCreateUserReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ClientCreateUserReq.Merge(m, src)
+}
+func (m *ClientCreateUserReq) XXX_Size() int {
+	return xxx_messageInfo_ClientCreateUserReq.Size(m)
+}
+func (m *ClientCreateUserReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_ClientCreateUserReq.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ClientCreateUserReq proto.InternalMessageInfo
+
+func (m *ClientCreateUserReq) GetOpenid() string {
+	if m != nil {
+		return m.Openid
+	}
+	return ""
+}
+
+func (m *ClientCreateUserReq) GetAvatar() string {
+	if m != nil {
+		return m.Avatar
+	}
+	return ""
+}
+
+func (m *ClientCreateUserReq) GetNickname() string {
+	if m != nil {
+		return m.Nickname
+	}
+	return ""
+}
+
+type ClientCreateUserRes struct {
+	Uid                  int64    `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ClientCreateUserRes) Reset()         { *m = ClientCreateUserRes{} }
+func (m *ClientCreateUserRes) String() string { return proto.CompactTextString(m) }
+func (*ClientCreateUserRes) ProtoMessage()    {}
+func (*ClientCreateUserRes) Descriptor() ([]byte, []int) {
+	return fileDescriptor_ef32c37ea206d67b, []int{14}
+}
+
+func (m *ClientCreateUserRes) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ClientCreateUserRes.Unmarshal(m, b)
+}
+func (m *ClientCreateUserRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ClientCreateUserRes.Marshal(b, m, deterministic)
+}
+func (m *ClientCreateUserRes) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ClientCreateUserRes.Merge(m, src)
+}
+func (m *ClientCreateUserRes) XXX_Size() int {
+	return xxx_messageInfo_ClientCreateUserRes.Size(m)
+}
+func (m *ClientCreateUserRes) XXX_DiscardUnknown() {
+	xxx_messageInfo_ClientCreateUserRes.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ClientCreateUserRes proto.InternalMessageInfo
+
+func (m *ClientCreateUserRes) GetUid() int64 {
+	if m != nil {
+		return m.Uid
+	}
+	return 0
+}
+
+type ClientUpdateByUidReq struct {
+	Uid                  int64    `protobuf:"varint,1,opt,name=uid,proto3" json:"uid,omitempty"`
+	Avatar               string   `protobuf:"bytes,2,opt,name=avatar,proto3" json:"avatar,omitempty"`
+	Nickname             string   `protobuf:"bytes,3,opt,name=nickname,proto3" json:"nickname,omitempty"`
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ClientUpdateByUidReq) Reset()         { *m = ClientUpdateByUidReq{} }
+func (m *ClientUpdateByUidReq) String() string { return proto.CompactTextString(m) }
+func (*ClientUpdateByUidReq) ProtoMessage()    {}
+func (*ClientUpdateByUidReq) Descriptor() ([]byte, []int) {
+	return fileDescriptor_ef32c37ea206d67b, []int{15}
+}
+
+func (m *ClientUpdateByUidReq) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ClientUpdateByUidReq.Unmarshal(m, b)
+}
+func (m *ClientUpdateByUidReq) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ClientUpdateByUidReq.Marshal(b, m, deterministic)
+}
+func (m *ClientUpdateByUidReq) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ClientUpdateByUidReq.Merge(m, src)
+}
+func (m *ClientUpdateByUidReq) XXX_Size() int {
+	return xxx_messageInfo_ClientUpdateByUidReq.Size(m)
+}
+func (m *ClientUpdateByUidReq) XXX_DiscardUnknown() {
+	xxx_messageInfo_ClientUpdateByUidReq.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ClientUpdateByUidReq proto.InternalMessageInfo
+
+func (m *ClientUpdateByUidReq) GetUid() int64 {
+	if m != nil {
+		return m.Uid
+	}
+	return 0
+}
+
+func (m *ClientUpdateByUidReq) GetAvatar() string {
+	if m != nil {
+		return m.Avatar
+	}
+	return ""
+}
+
+func (m *ClientUpdateByUidReq) GetNickname() string {
+	if m != nil {
+		return m.Nickname
+	}
+	return ""
+}
+
+type ClientUpdateByUidRes struct {
+	XXX_NoUnkeyedLiteral struct{} `json:"-"`
+	XXX_unrecognized     []byte   `json:"-"`
+	XXX_sizecache        int32    `json:"-"`
+}
+
+func (m *ClientUpdateByUidRes) Reset()         { *m = ClientUpdateByUidRes{} }
+func (m *ClientUpdateByUidRes) String() string { return proto.CompactTextString(m) }
+func (*ClientUpdateByUidRes) ProtoMessage()    {}
+func (*ClientUpdateByUidRes) Descriptor() ([]byte, []int) {
+	return fileDescriptor_ef32c37ea206d67b, []int{16}
+}
+
+func (m *ClientUpdateByUidRes) XXX_Unmarshal(b []byte) error {
+	return xxx_messageInfo_ClientUpdateByUidRes.Unmarshal(m, b)
+}
+func (m *ClientUpdateByUidRes) XXX_Marshal(b []byte, deterministic bool) ([]byte, error) {
+	return xxx_messageInfo_ClientUpdateByUidRes.Marshal(b, m, deterministic)
+}
+func (m *ClientUpdateByUidRes) XXX_Merge(src proto.Message) {
+	xxx_messageInfo_ClientUpdateByUidRes.Merge(m, src)
+}
+func (m *ClientUpdateByUidRes) XXX_Size() int {
+	return xxx_messageInfo_ClientUpdateByUidRes.Size(m)
+}
+func (m *ClientUpdateByUidRes) XXX_DiscardUnknown() {
+	xxx_messageInfo_ClientUpdateByUidRes.DiscardUnknown(m)
+}
+
+var xxx_messageInfo_ClientUpdateByUidRes proto.InternalMessageInfo
+
 func init() {
 	proto.RegisterType((*AdminSendEmailCodeReq)(nil), "admin_send_email_code_req")
 	proto.RegisterType((*AdminSendEmailCodeRes)(nil), "admin_send_email_code_res")
@@ -789,53 +953,60 @@ func init() {
 	proto.RegisterType((*AdminPasswordBackRes)(nil), "admin_password_back_res")
 	proto.RegisterType((*AdminDataFullReq)(nil), "admin_data_full_req")
 	proto.RegisterType((*Res)(nil), "res")
-	proto.RegisterType((*ClientUserWechatLoginReq)(nil), "client_user_wechat_login_req")
-	proto.RegisterType((*ClientUserWechatLoginRes)(nil), "client_user_wechat_login_res")
+	proto.RegisterType((*ClientGetUserByOpenidReq)(nil), "client_get_user_by_openid_req")
+	proto.RegisterType((*ClientGetUserByOpenidRes)(nil), "client_get_user_by_openid_res")
 	proto.RegisterType((*ClientGetUserByUidReq)(nil), "client_get_user_by_uid_req")
 	proto.RegisterType((*ClientGetUserByUidRes)(nil), "client_get_user_by_uid_res")
+	proto.RegisterType((*ClientCreateUserReq)(nil), "client_create_user_req")
+	proto.RegisterType((*ClientCreateUserRes)(nil), "client_create_user_res")
+	proto.RegisterType((*ClientUpdateByUidReq)(nil), "client_update_by_uid_req")
+	proto.RegisterType((*ClientUpdateByUidRes)(nil), "client_update_by_uid_res")
 }
 
 func init() { proto.RegisterFile("api/proto/proto.proto", fileDescriptor_ef32c37ea206d67b) }
 
 var fileDescriptor_ef32c37ea206d67b = []byte{
-	// 589 bytes of a gzipped FileDescriptorProto
-	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x94, 0x55, 0xdf, 0x6e, 0xd3, 0x3e,
-	0x14, 0x5e, 0x9a, 0xb4, 0x5d, 0xcf, 0xf4, 0xfb, 0x31, 0x79, 0x5b, 0x09, 0x81, 0x49, 0x53, 0xae,
-	0x90, 0x90, 0x32, 0x69, 0x48, 0x5c, 0x21, 0x50, 0x41, 0x5c, 0xc1, 0x0d, 0x13, 0x57, 0xbb, 0xb1,
-	0xdc, 0xc4, 0x2b, 0x56, 0xd3, 0xb8, 0xd8, 0x2e, 0x13, 0x6f, 0xc3, 0x63, 0xf0, 0x72, 0x08, 0xe4,
-	0x3f, 0x6d, 0x93, 0x36, 0x8e, 0xca, 0x4d, 0x7a, 0xce, 0xb1, 0xcf, 0xe7, 0xef, 0xf3, 0x39, 0xc7,
-	0x85, 0x0b, 0xb2, 0x64, 0xd7, 0x4b, 0xc1, 0x15, 0xb7, 0xdf, 0xcc, 0x7c, 0xd3, 0x0f, 0xf0, 0x84,
-	0x14, 0x0b, 0x56, 0x61, 0x49, 0xab, 0x02, 0xd3, 0x05, 0x61, 0x25, 0xce, 0x79, 0x41, 0xb1, 0xa0,
-	0xdf, 0xd0, 0x39, 0xf4, 0x4d, 0x24, 0x0e, 0xae, 0x82, 0xe7, 0xa3, 0x5b, 0xeb, 0x20, 0x04, 0xd1,
-	0xbd, 0xe0, 0x8b, 0xb8, 0x67, 0x82, 0xc6, 0x4e, 0x27, 0x7e, 0x18, 0xa9, 0x13, 0xb4, 0x6d, 0x50,
-	0xc2, 0x5b, 0x63, 0xa3, 0x53, 0x08, 0x17, 0x72, 0xe6, 0x30, 0xb4, 0x99, 0xbe, 0x01, 0x64, 0x21,
-	0x04, 0x9d, 0x31, 0xa9, 0xa8, 0xe8, 0xa6, 0x60, 0x10, 0x1d, 0x05, 0x6d, 0xa7, 0xbf, 0x83, 0x16,
-	0x80, 0x03, 0x0f, 0xd7, 0x91, 0x15, 0x2b, 0xe2, 0xd0, 0x6c, 0xd2, 0xa6, 0xce, 0xab, 0xc8, 0x82,
-	0xc6, 0x91, 0x3d, 0x42, 0xdb, 0x68, 0x0c, 0x03, 0xf2, 0x9d, 0x28, 0x22, 0xe2, 0xbe, 0x89, 0x3a,
-	0x6f, 0x4b, 0x72, 0x50, 0x27, 0x99, 0xc2, 0x7f, 0x25, 0x91, 0x0a, 0x97, 0x7c, 0xc6, 0x2a, 0x4c,
-	0x54, 0x3c, 0x34, 0xab, 0x27, 0x3a, 0xf8, 0x49, 0xc7, 0x26, 0x0a, 0x5d, 0x02, 0xe4, 0x82, 0x12,
-	0x45, 0x0b, 0xbd, 0xe1, 0xd8, 0x6c, 0x18, 0xb9, 0xc8, 0x44, 0x69, 0x60, 0xc5, 0xe7, 0xb4, 0x8a,
-	0x47, 0x16, 0xd8, 0x38, 0x3a, 0x2a, 0x78, 0x49, 0x65, 0x0c, 0x57, 0xa1, 0x8e, 0x1a, 0x27, 0x7d,
-	0x0f, 0x8f, 0xac, 0x7c, 0x7b, 0x9e, 0xff, 0xf2, 0x12, 0x38, 0x5e, 0x12, 0x29, 0x1f, 0xb8, 0x28,
-	0xdc, 0x15, 0x6c, 0xfc, 0x14, 0xc3, 0x63, 0x0b, 0xb2, 0x8e, 0xe0, 0x29, 0xc9, 0xe7, 0xff, 0x56,
-	0x89, 0xc6, 0x01, 0xe1, 0xce, 0x01, 0x6f, 0x7d, 0x07, 0x1c, 0xda, 0x26, 0x1c, 0xce, 0x2c, 0x40,
-	0x41, 0x14, 0xc1, 0xf7, 0xab, 0xb2, 0x34, 0xec, 0x5c, 0x01, 0x83, 0xfd, 0x02, 0xf6, 0x5a, 0x0b,
-	0x18, 0x36, 0x0a, 0x58, 0x67, 0x1c, 0xed, 0x30, 0x7e, 0x01, 0xe1, 0xe1, 0xec, 0x6e, 0xe0, 0x59,
-	0x5e, 0x32, 0x5a, 0x29, 0xbc, 0x92, 0x54, 0xe0, 0x07, 0x9a, 0x7f, 0x25, 0xaa, 0x56, 0x91, 0x3a,
-	0xca, 0xba, 0x71, 0x7f, 0x05, 0x9d, 0x49, 0x72, 0xdb, 0x05, 0x41, 0xbd, 0x0b, 0x9c, 0xe2, 0xde,
-	0x56, 0xf1, 0x18, 0x06, 0x7c, 0x49, 0x2b, 0xb6, 0xbe, 0x75, 0xe7, 0xd5, 0x54, 0x47, 0xbb, 0xaa,
-	0x2b, 0x96, 0xcf, 0xcd, 0x2d, 0xd9, 0x86, 0xde, 0xf8, 0x1b, 0xa2, 0xba, 0xa3, 0xfb, 0x4d, 0xb9,
-	0xc3, 0xad, 0xdc, 0x0c, 0x12, 0xc7, 0x7c, 0x46, 0x1d, 0xfb, 0xe9, 0x0f, 0xbc, 0x62, 0x45, 0x7b,
-	0x4d, 0xd2, 0x9f, 0x41, 0x47, 0x82, 0x6c, 0x29, 0xe2, 0x56, 0x52, 0xcf, 0x23, 0x29, 0xf4, 0x4a,
-	0x8a, 0x3c, 0x92, 0xfa, 0xfb, 0x92, 0x06, 0x1b, 0x49, 0x37, 0x7f, 0x42, 0x88, 0x34, 0x2f, 0xf4,
-	0x19, 0x2e, 0x5a, 0x9f, 0x34, 0x94, 0x64, 0xde, 0x17, 0x33, 0xf1, 0xaf, 0xc9, 0xf4, 0x08, 0xbd,
-	0x86, 0xff, 0x9b, 0x2f, 0x14, 0x3a, 0xcb, 0xf6, 0xdf, 0xbc, 0xa4, 0x25, 0xa8, 0xb3, 0x5f, 0xc1,
-	0x49, 0x6d, 0xc0, 0xd1, 0x69, 0xb6, 0x33, 0xee, 0xbe, 0xbc, 0x8f, 0xeb, 0x89, 0x69, 0x8c, 0x1c,
-	0x8a, 0x33, 0xcf, 0xa4, 0x27, 0xbe, 0x15, 0x0d, 0x76, 0xbd, 0x7e, 0x65, 0x36, 0xe3, 0x87, 0xce,
-	0xb3, 0x96, 0x81, 0x4c, 0xa2, 0xcc, 0x26, 0xdc, 0x41, 0xec, 0x6b, 0x6e, 0x74, 0x99, 0x75, 0x0d,
-	0x4b, 0xd2, 0xb9, 0xac, 0xb1, 0xbf, 0xc0, 0xb8, 0xbd, 0x9b, 0xd0, 0xd3, 0xcc, 0xdf, 0x97, 0x49,
-	0xc7, 0xa2, 0x4c, 0x8f, 0xde, 0x0d, 0xef, 0xfa, 0xe6, 0xbf, 0x71, 0x3a, 0x30, 0x3f, 0x2f, 0xff,
-	0x06, 0x00, 0x00, 0xff, 0xff, 0x44, 0xea, 0x90, 0xd5, 0x3b, 0x07, 0x00, 0x00,
+	// 635 bytes of a gzipped FileDescriptorProto
+	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xc4, 0x56, 0x5d, 0x6b, 0x13, 0x4d,
+	0x14, 0xee, 0x66, 0x93, 0xb4, 0x39, 0xe5, 0x7d, 0x2d, 0xd3, 0x34, 0xdd, 0x8c, 0x54, 0xca, 0x5c,
+	0x89, 0xc2, 0x14, 0x14, 0xf4, 0x46, 0x94, 0x28, 0x82, 0xa0, 0x08, 0x16, 0xaf, 0x04, 0x19, 0x27,
+	0xd9, 0x69, 0x58, 0xb2, 0xd9, 0x8d, 0x3b, 0x13, 0xc5, 0x9f, 0xe1, 0xbd, 0x17, 0xfe, 0x51, 0x41,
+	0xe6, 0x23, 0xc9, 0x6e, 0xb2, 0xb3, 0x44, 0x6f, 0xbc, 0xd9, 0x9e, 0x8f, 0x39, 0xcf, 0x79, 0x66,
+	0xce, 0x47, 0x03, 0x67, 0x7c, 0x91, 0x5c, 0x2d, 0x8a, 0x5c, 0xe5, 0xf6, 0x4b, 0xcd, 0x97, 0xbc,
+	0x84, 0x21, 0x8f, 0xe7, 0x49, 0xc6, 0xa4, 0xc8, 0x62, 0x26, 0xe6, 0x3c, 0x49, 0xd9, 0x24, 0x8f,
+	0x05, 0x2b, 0xc4, 0x67, 0xd4, 0x87, 0x8e, 0xb1, 0x44, 0xc1, 0x65, 0x70, 0xb7, 0x77, 0x6d, 0x15,
+	0x84, 0xa0, 0x7d, 0x53, 0xe4, 0xf3, 0xa8, 0x65, 0x8c, 0x46, 0x26, 0x23, 0x3f, 0x8c, 0xd4, 0x01,
+	0x5a, 0x36, 0x28, 0xe1, 0xb5, 0x91, 0xd1, 0x09, 0x84, 0x73, 0x39, 0x75, 0x18, 0x5a, 0x24, 0x4f,
+	0x01, 0x59, 0x88, 0x42, 0x4c, 0x13, 0xa9, 0x44, 0xd1, 0x4c, 0xc1, 0x20, 0x3a, 0x0a, 0x5a, 0x26,
+	0xbf, 0x82, 0x1a, 0x80, 0x3d, 0x93, 0x6b, 0xcb, 0x32, 0x89, 0xa3, 0xd0, 0x1c, 0xd2, 0xa2, 0x8e,
+	0xcb, 0xf8, 0x5c, 0x44, 0x6d, 0x9b, 0x42, 0xcb, 0x68, 0x00, 0x5d, 0xfe, 0x85, 0x2b, 0x5e, 0x44,
+	0x1d, 0x63, 0x75, 0xda, 0x86, 0x64, 0xb7, 0x4c, 0x92, 0xc0, 0x7f, 0x29, 0x97, 0x8a, 0xa5, 0xf9,
+	0x34, 0xc9, 0x18, 0x57, 0xd1, 0xa1, 0xf1, 0x1e, 0x6b, 0xe3, 0x1b, 0x6d, 0x1b, 0x29, 0x74, 0x01,
+	0x30, 0x29, 0x04, 0x57, 0x22, 0xd6, 0x07, 0x8e, 0xcc, 0x81, 0x9e, 0xb3, 0x8c, 0x94, 0x06, 0x56,
+	0xf9, 0x4c, 0x64, 0x51, 0xcf, 0x02, 0x1b, 0x45, 0x5b, 0x8b, 0x3c, 0x15, 0x32, 0x82, 0xcb, 0x50,
+	0x5b, 0x8d, 0x42, 0x5e, 0xc0, 0x2d, 0x7b, 0x7d, 0x9b, 0xcf, 0xff, 0x78, 0x18, 0x8e, 0x16, 0x5c,
+	0xca, 0xaf, 0x79, 0x11, 0xbb, 0x27, 0x58, 0xeb, 0x84, 0xc1, 0xb9, 0x05, 0x59, 0x59, 0xd8, 0x98,
+	0x4f, 0x66, 0x7f, 0x56, 0x89, 0x4a, 0x82, 0x70, 0x2b, 0xc1, 0x33, 0x5f, 0x82, 0x7d, 0xdb, 0x24,
+	0x87, 0x53, 0x0b, 0x10, 0x73, 0xc5, 0xd9, 0xcd, 0x32, 0x4d, 0x0d, 0x3b, 0x57, 0xc0, 0x60, 0xb7,
+	0x80, 0xad, 0xda, 0x02, 0x86, 0x95, 0x02, 0x96, 0x19, 0xb7, 0xb7, 0x18, 0xdf, 0x87, 0x70, 0x7f,
+	0x76, 0x8f, 0xe1, 0x62, 0x92, 0x26, 0x22, 0x53, 0x6c, 0x2a, 0x14, 0x5b, 0x4a, 0x51, 0xb0, 0xf1,
+	0x37, 0x96, 0x2f, 0x44, 0x96, 0xc4, 0x86, 0xe7, 0x00, 0xba, 0x56, 0x73, 0xcf, 0xe8, 0x34, 0xf2,
+	0x3d, 0x68, 0x8e, 0x94, 0x35, 0x37, 0xdc, 0x60, 0xb5, 0xca, 0x58, 0x4d, 0xb7, 0xcc, 0x92, 0xc9,
+	0xac, 0xd4, 0xd6, 0x6b, 0x7d, 0x7d, 0x3d, 0xdd, 0xd8, 0x1d, 0x37, 0x51, 0x14, 0x70, 0x0d, 0xa5,
+	0xa5, 0xbb, 0xc9, 0x0e, 0x1f, 0xf2, 0x33, 0x68, 0x08, 0xf8, 0x07, 0x17, 0x58, 0xd5, 0xa7, 0xbb,
+	0xa9, 0x4f, 0x0c, 0x03, 0xc7, 0xd0, 0x0e, 0x99, 0x25, 0xd9, 0x50, 0x98, 0x12, 0x97, 0x96, 0x97,
+	0x4b, 0x58, 0xe5, 0x42, 0xee, 0x79, 0xb2, 0xd4, 0xbc, 0x01, 0xf9, 0x04, 0x91, 0x3b, 0xbb, 0x5c,
+	0xc4, 0xfa, 0x6c, 0xd3, 0x13, 0xff, 0x15, 0x1b, 0xec, 0xcd, 0x20, 0x1f, 0xfc, 0xe8, 0x40, 0x5b,
+	0x93, 0x43, 0xef, 0xe0, 0xac, 0x76, 0x81, 0x23, 0x4c, 0xbd, 0xff, 0x1f, 0xb0, 0xdf, 0x27, 0xc9,
+	0x01, 0x7a, 0x02, 0xff, 0x57, 0xf7, 0x31, 0x3a, 0xa5, 0xbb, 0x1b, 0x1e, 0xd7, 0x18, 0x75, 0xf4,
+	0x23, 0x38, 0x2e, 0xad, 0x33, 0x74, 0x42, 0xb7, 0x96, 0x9b, 0x2f, 0xee, 0xf5, 0x6a, 0x3f, 0x54,
+	0x16, 0x0c, 0x8a, 0xa8, 0x67, 0xaf, 0x61, 0x9f, 0x47, 0x83, 0x5d, 0xad, 0x76, 0xea, 0x7a, 0xd9,
+	0xa0, 0x3e, 0xad, 0x59, 0x3f, 0xb8, 0x4d, 0x6d, 0xc0, 0x47, 0x18, 0x7a, 0xa7, 0x18, 0xdd, 0xa1,
+	0x8d, 0xbb, 0x01, 0x37, 0xfb, 0x35, 0xfc, 0xfb, 0x75, 0x63, 0x6d, 0x0d, 0x18, 0xba, 0x4d, 0xfd,
+	0xa3, 0x8a, 0x1b, 0x9c, 0x1a, 0xf5, 0x15, 0xa0, 0xdd, 0x76, 0x45, 0xe7, 0xb4, 0x7e, 0x52, 0xb0,
+	0xc7, 0xa1, 0x91, 0xde, 0x42, 0xbf, 0xae, 0xd5, 0xd0, 0x90, 0xfa, 0x7a, 0x1c, 0x7b, 0x5d, 0x92,
+	0x1c, 0x3c, 0x3f, 0xfc, 0xd0, 0x31, 0x3f, 0x53, 0xc6, 0x5d, 0xf3, 0xe7, 0xe1, 0xef, 0x00, 0x00,
+	0x00, 0xff, 0xff, 0x68, 0x91, 0x7d, 0x05, 0xc6, 0x08, 0x00, 0x00,
 }
 
 // Reference imports to suppress errors if they are not otherwise used.
@@ -855,8 +1026,10 @@ type UserClient interface {
 	AdminLogin(ctx context.Context, in *AdminLoginReq, opts ...grpc.CallOption) (*AdminRegisterRes, error)
 	AdminPasswordBack(ctx context.Context, in *AdminPasswordBackReq, opts ...grpc.CallOption) (*AdminPasswordBackRes, error)
 	AdminDataFull(ctx context.Context, in *AdminDataFullReq, opts ...grpc.CallOption) (*Res, error)
-	ClientUserWechatLogin(ctx context.Context, in *ClientUserWechatLoginReq, opts ...grpc.CallOption) (*ClientUserWechatLoginRes, error)
+	ClientGetUserByOpenid(ctx context.Context, in *ClientGetUserByOpenidReq, opts ...grpc.CallOption) (*ClientGetUserByOpenidRes, error)
 	ClientGetUserByUid(ctx context.Context, in *ClientGetUserByUidReq, opts ...grpc.CallOption) (*ClientGetUserByUidRes, error)
+	ClientCreateUser(ctx context.Context, in *ClientCreateUserReq, opts ...grpc.CallOption) (*ClientCreateUserRes, error)
+	ClientUpdateByUid(ctx context.Context, in *ClientUpdateByUidReq, opts ...grpc.CallOption) (*ClientUpdateByUidRes, error)
 }
 
 type userClient struct {
@@ -912,9 +1085,9 @@ func (c *userClient) AdminDataFull(ctx context.Context, in *AdminDataFullReq, op
 	return out, nil
 }
 
-func (c *userClient) ClientUserWechatLogin(ctx context.Context, in *ClientUserWechatLoginReq, opts ...grpc.CallOption) (*ClientUserWechatLoginRes, error) {
-	out := new(ClientUserWechatLoginRes)
-	err := c.cc.Invoke(ctx, "/user/client_user_wechat_login", in, out, opts...)
+func (c *userClient) ClientGetUserByOpenid(ctx context.Context, in *ClientGetUserByOpenidReq, opts ...grpc.CallOption) (*ClientGetUserByOpenidRes, error) {
+	out := new(ClientGetUserByOpenidRes)
+	err := c.cc.Invoke(ctx, "/user/client_get_user_by_openid", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -930,6 +1103,24 @@ func (c *userClient) ClientGetUserByUid(ctx context.Context, in *ClientGetUserBy
 	return out, nil
 }
 
+func (c *userClient) ClientCreateUser(ctx context.Context, in *ClientCreateUserReq, opts ...grpc.CallOption) (*ClientCreateUserRes, error) {
+	out := new(ClientCreateUserRes)
+	err := c.cc.Invoke(ctx, "/user/client_create_user", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *userClient) ClientUpdateByUid(ctx context.Context, in *ClientUpdateByUidReq, opts ...grpc.CallOption) (*ClientUpdateByUidRes, error) {
+	out := new(ClientUpdateByUidRes)
+	err := c.cc.Invoke(ctx, "/user/client_update_by_uid", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // UserServer is the server API for User service.
 type UserServer interface {
 	AdminSendEmailCode(context.Context, *AdminSendEmailCodeReq) (*AdminSendEmailCodeRes, error)
@@ -937,8 +1128,10 @@ type UserServer interface {
 	AdminLogin(context.Context, *AdminLoginReq) (*AdminRegisterRes, error)
 	AdminPasswordBack(context.Context, *AdminPasswordBackReq) (*AdminPasswordBackRes, error)
 	AdminDataFull(context.Context, *AdminDataFullReq) (*Res, error)
-	ClientUserWechatLogin(context.Context, *ClientUserWechatLoginReq) (*ClientUserWechatLoginRes, error)
+	ClientGetUserByOpenid(context.Context, *ClientGetUserByOpenidReq) (*ClientGetUserByOpenidRes, error)
 	ClientGetUserByUid(context.Context, *ClientGetUserByUidReq) (*ClientGetUserByUidRes, error)
+	ClientCreateUser(context.Context, *ClientCreateUserReq) (*ClientCreateUserRes, error)
+	ClientUpdateByUid(context.Context, *ClientUpdateByUidReq) (*ClientUpdateByUidRes, error)
 }
 
 // UnimplementedUserServer can be embedded to have forward compatible implementations.
@@ -960,11 +1153,17 @@ func (*UnimplementedUserServer) AdminPasswordBack(ctx context.Context, req *Admi
 func (*UnimplementedUserServer) AdminDataFull(ctx context.Context, req *AdminDataFullReq) (*Res, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AdminDataFull not implemented")
 }
-func (*UnimplementedUserServer) ClientUserWechatLogin(ctx context.Context, req *ClientUserWechatLoginReq) (*ClientUserWechatLoginRes, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method ClientUserWechatLogin not implemented")
+func (*UnimplementedUserServer) ClientGetUserByOpenid(ctx context.Context, req *ClientGetUserByOpenidReq) (*ClientGetUserByOpenidRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClientGetUserByOpenid not implemented")
 }
 func (*UnimplementedUserServer) ClientGetUserByUid(ctx context.Context, req *ClientGetUserByUidReq) (*ClientGetUserByUidRes, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ClientGetUserByUid not implemented")
+}
+func (*UnimplementedUserServer) ClientCreateUser(ctx context.Context, req *ClientCreateUserReq) (*ClientCreateUserRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClientCreateUser not implemented")
+}
+func (*UnimplementedUserServer) ClientUpdateByUid(ctx context.Context, req *ClientUpdateByUidReq) (*ClientUpdateByUidRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method ClientUpdateByUid not implemented")
 }
 
 func RegisterUserServer(s *grpc.Server, srv UserServer) {
@@ -1061,20 +1260,20 @@ func _User_AdminDataFull_Handler(srv interface{}, ctx context.Context, dec func(
 	return interceptor(ctx, in, info, handler)
 }
 
-func _User_ClientUserWechatLogin_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(ClientUserWechatLoginReq)
+func _User_ClientGetUserByOpenid_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ClientGetUserByOpenidReq)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(UserServer).ClientUserWechatLogin(ctx, in)
+		return srv.(UserServer).ClientGetUserByOpenid(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/user/ClientUserWechatLogin",
+		FullMethod: "/user/ClientGetUserByOpenid",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(UserServer).ClientUserWechatLogin(ctx, req.(*ClientUserWechatLoginReq))
+		return srv.(UserServer).ClientGetUserByOpenid(ctx, req.(*ClientGetUserByOpenidReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1093,6 +1292,42 @@ func _User_ClientGetUserByUid_Handler(srv interface{}, ctx context.Context, dec 
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
 		return srv.(UserServer).ClientGetUserByUid(ctx, req.(*ClientGetUserByUidReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_ClientCreateUser_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ClientCreateUserReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).ClientCreateUser(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/user/ClientCreateUser",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).ClientCreateUser(ctx, req.(*ClientCreateUserReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _User_ClientUpdateByUid_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(ClientUpdateByUidReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(UserServer).ClientUpdateByUid(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/user/ClientUpdateByUid",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(UserServer).ClientUpdateByUid(ctx, req.(*ClientUpdateByUidReq))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -1122,12 +1357,20 @@ var _User_serviceDesc = grpc.ServiceDesc{
 			Handler:    _User_AdminDataFull_Handler,
 		},
 		{
-			MethodName: "client_user_wechat_login",
-			Handler:    _User_ClientUserWechatLogin_Handler,
+			MethodName: "client_get_user_by_openid",
+			Handler:    _User_ClientGetUserByOpenid_Handler,
 		},
 		{
 			MethodName: "client_get_user_by_uid",
 			Handler:    _User_ClientGetUserByUid_Handler,
+		},
+		{
+			MethodName: "client_create_user",
+			Handler:    _User_ClientCreateUser_Handler,
+		},
+		{
+			MethodName: "client_update_by_uid",
+			Handler:    _User_ClientUpdateByUid_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
