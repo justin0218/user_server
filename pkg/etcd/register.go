@@ -1,7 +1,6 @@
 package etcd
 
 import (
-	"user_server/store"
 	"context"
 	"fmt"
 	"github.com/coreos/etcd/clientv3"
@@ -10,6 +9,7 @@ import (
 	"strings"
 	"syscall"
 	"time"
+	"user_server/store"
 )
 
 type Wiper struct {
@@ -58,9 +58,11 @@ func (s *Wiper) GetClient() *clientv3.Client {
 
 // Register 注册地址到ETCD组件中 使用 ; 分割
 func (s *Wiper) KeepAlive() {
+	fmt.Println("conf.Get().Etcd.Ttl", conf.Get().Etcd.Ttl)
 	ticker := time.NewTicker(time.Second * time.Duration(conf.Get().Etcd.Ttl))
 	go func() {
 		for {
+			fmt.Println(112233)
 			getResp, err := s.client.Get(context.Background(), v)
 			if err != nil {
 				log.Get().Error("cli getResp err:%+v\n %v", getResp, err)
